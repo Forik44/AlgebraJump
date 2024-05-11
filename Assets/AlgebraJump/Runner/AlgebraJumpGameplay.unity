@@ -488,8 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 770844569}
-  - component: {fileID: 770844568}
-  - component: {fileID: 770844567}
+  - component: {fileID: 770844570}
   m_Layer: 0
   m_Name: FinishPoint
   m_TagString: Untagged
@@ -497,53 +496,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &770844567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770844566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.FinishPointViewModel
-  _viewModelPropertyName: 
-  _isParentView: 1
-  _subViews: []
-  _childBinders:
-  - {fileID: 770844568}
---- !u!114 &770844568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770844566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6844eebe8ba3c4ab4d9649773d2d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
-  _propertyName: IsActive
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 770844566}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &770844569
 Transform:
   m_ObjectHideFlags: 0
@@ -553,13 +505,25 @@ Transform:
   m_GameObject: {fileID: 770844566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.61, y: 1.48, z: 0}
+  m_LocalPosition: {x: 6.73, y: 1.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 889665483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770844570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770844566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ba36e83f4e410ca91c0ef7d2ab9a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &889665482
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +687,7 @@ GameObject:
   - component: {fileID: 1154046638}
   - component: {fileID: 1154046639}
   - component: {fileID: 1154046640}
+  - component: {fileID: 1154046641}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -764,17 +729,17 @@ MonoBehaviour:
   _event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1154046632}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
+      - m_Target: {fileID: 1154046637}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1154046637
 MonoBehaviour:
@@ -788,6 +753,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f101494521014e346a6e7b1bfdcbe08e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnPositionChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1154046641}
+        m_TargetAssemblyTypeName: Lukomor.MVVM.Binders.EmptyMethodBinder, Lukomor
+        m_MethodName: Perform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _speed: 1
   _smoothing: 1
   _gravity: -9.81
@@ -815,6 +795,7 @@ MonoBehaviour:
   _subViews: []
   _childBinders:
   - {fileID: 1154046636}
+  - {fileID: 1154046641}
 --- !u!61 &1154046639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -888,6 +869,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1154046641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154046632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e42fd23546bf484089a642ac8cdd31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
+  _propertyName: UpdatePlayerPosition
 --- !u!1 &1156057997
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,8 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1156058000}
-  - component: {fileID: 1156057999}
-  - component: {fileID: 1156057998}
+  - component: {fileID: 1156058001}
   m_Layer: 0
   m_Name: StartPoint
   m_TagString: Untagged
@@ -906,53 +900,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1156057998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156057997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.StartPointViewModel
-  _viewModelPropertyName: 
-  _isParentView: 1
-  _subViews: []
-  _childBinders:
-  - {fileID: 1156057999}
---- !u!114 &1156057999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156057997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6844eebe8ba3c4ab4d9649773d2d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
-  _propertyName: IsActive
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1156057997}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1156058000
 Transform:
   m_ObjectHideFlags: 0
@@ -969,6 +916,18 @@ Transform:
   - {fileID: 583951042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1156058001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156057997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf778e0b56446babad3d6915776b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1365491630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,8 +973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1154046637}
-  _startPoint: {fileID: 1156057998}
-  _finishPoint: {fileID: 770844567}
+  _startPoint: {fileID: 1156058001}
+  _finishPoint: {fileID: 770844570}
   _rootUIView: {fileID: 8065621984938099541}
 --- !u!1 &1553770593
 GameObject:

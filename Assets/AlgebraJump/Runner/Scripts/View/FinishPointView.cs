@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Lukomor.AlgebraJump.Runner
 {
-    public class FinishPointView
+    public class FinishPointView : MonoBehaviour
     {
 
     }

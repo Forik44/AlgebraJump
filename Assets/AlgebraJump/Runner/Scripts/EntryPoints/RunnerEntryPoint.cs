@@ -1,3 +1,4 @@
+using System;
 using Lukomor.DI;
 using Lukomor.MVVM;
 using UnityEngine;
@@ -7,8 +8,8 @@ namespace Lukomor.AlgebraJump.Runner
     public class RunnerEntryPoint : MonoBehaviour
     {
         [SerializeField] private PlayerView _player;
-        [SerializeField] private View _startPoint;
-        [SerializeField] private View _finishPoint;
+        [SerializeField] private StartPointView _startPoint;
+        [SerializeField] private FinishPointView _finishPoint;
         [SerializeField] private View _rootUIView;
 
         public void Process(DIContainer container)
@@ -40,12 +41,8 @@ namespace Lukomor.AlgebraJump.Runner
 
         private void RegisterViewModels(DIContainer container)
         {
-            container.RegisterSingleton(c => new GameSessionService());
-            container.RegisterSingleton(c => new PlayerViewModel(c.Resolve<GameSessionService>()));
-            container.RegisterSingleton(c => new FloorViewModel(c.Resolve<GameSessionService>()));
-            container.RegisterSingleton(c => new StartPointViewModel(c.Resolve<GameSessionService>()));
-            container.RegisterSingleton(c => new FinishPointViewModel(c.Resolve<GameSessionService>()));
-            
+            container.RegisterSingleton(c => new GameSessionService(_startPoint.transform.position.x, _finishPoint.transform.position.x));
+            container.RegisterSingleton(c => new PlayerViewModel(c.Resolve<GameSessionService>(), _player));
             // UI
             
             container.RegisterSingleton(
@@ -71,8 +68,6 @@ namespace Lukomor.AlgebraJump.Runner
         private void BindViewModels(DIContainer container)
         {
             _player.GetComponent<View>().Bind(container.Resolve<PlayerViewModel>());
-            _startPoint.GetComponent<View>().Bind(container.Resolve<StartPointViewModel>());
-            _finishPoint.GetComponent<View>().Bind(container.Resolve<FinishPointViewModel>());
             _rootUIView.Bind(container.Resolve<UIRootGameplayViewModel>());
         }
 

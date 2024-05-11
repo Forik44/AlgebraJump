@@ -2,12 +2,15 @@ using System;
 using System.Linq;
 using TMPro.EditorUtilities;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Lukomor.AlgebraJump.Runner
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerView : MonoBehaviour
     {
+        public UnityEvent OnPositionChanged;
+        
         [SerializeField] private float _speed = 1f;
         [SerializeField] private float _smoothing = 1f;
         [SerializeField] private float _gravity = -9.81f;
@@ -54,6 +57,7 @@ namespace Lukomor.AlgebraJump.Runner
             var nextPosition = Vector3.Lerp(transform.position, transform.position + direction * _speed, Time.deltaTime * _smoothing);
 
             transform.position = nextPosition;
+            OnPositionChanged?.Invoke();
         }
 
         private void Awake()

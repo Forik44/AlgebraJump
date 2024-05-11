@@ -17,6 +17,8 @@ namespace Lukomor.AlgebraJump.Runner
         public int ScoreLimit => _scoreLimit;
         
         private readonly int _scoreLimit;
+        private readonly int _startPointX;
+        private readonly int _finishPointX;
 
         private readonly ReactiveProperty<int> _playerScore;
 
@@ -25,9 +27,12 @@ namespace Lukomor.AlgebraJump.Runner
         private event Action<Unit> _gameWin;
         private event Action<Unit> _restartedGame;
         
-        public GameSessionService()
+        public GameSessionService(float startPointX, float finishPointX)
         {
-            _scoreLimit = 100;
+            _startPointX = (int)Math.Round(startPointX);
+            _finishPointX = (int)Math.Round(finishPointX);
+            
+            _scoreLimit = WorldToRelativePosition(_finishPointX, _startPointX);
             
             _playerScore = new ReactiveProperty<int>(0);
             _isPaused = new ReactiveProperty<bool>(false);
@@ -37,19 +42,25 @@ namespace Lukomor.AlgebraJump.Runner
             GameRestarted = Observable.FromEvent<Unit>(a => _restartedGame += a, a => _restartedGame -= a);
         }
 
-        public void UpdateScore(int score)
+        public void UpdateScore(float playerPosition)
         {
             if (_isPaused.Value)
             {
                 return;
             }
 
-            _playerScore.Value = Math.Clamp(score, 0, _scoreLimit);
+            _playerScore.Value = Math.Clamp(WorldToRelativePosition(playerPosition, _startPointX), 0, _scoreLimit);
             
             if (_playerScore.Value >= _scoreLimit)
             {
+                Pause();
                 _gameWin?.Invoke(Unit.Default);
             }
+        }
+
+        private int WorldToRelativePosition(float playerPosition, int startPointX)
+        {
+            return (int)Math.Round(playerPosition - startPointX);
         }
 
         public void RestartGame()
@@ -63,9 +74,7 @@ namespace Lukomor.AlgebraJump.Runner
         
         public void LoseGame()
         {
-            _playerScore.Value = 0;
-
-            Unpause();
+            Pause();
             
             _gameLose?.Invoke(Unit.Default);
         }
