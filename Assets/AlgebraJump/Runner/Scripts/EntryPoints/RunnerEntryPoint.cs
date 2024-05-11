@@ -7,10 +7,13 @@ namespace Lukomor.AlgebraJump.Runner
 {
     public class RunnerEntryPoint : MonoBehaviour
     {
-        [SerializeField] private PlayerView _player;
         [SerializeField] private StartPointView _startPoint;
         [SerializeField] private FinishPointView _finishPoint;
         [SerializeField] private View _rootUIView;
+        [SerializeField] private SpawnerFactory _spawnerFactory;
+        
+        private PlayerView _player;
+        private CameraFollower _cameraFollower;
 
         public void Process(DIContainer container)
         {
@@ -22,6 +25,12 @@ namespace Lukomor.AlgebraJump.Runner
 
         private void SetupPlayer()
         {
+            _player = _spawnerFactory.SpawnPlayer();
+            _player.transform.position = _startPoint.transform.position;
+            
+            _cameraFollower = _spawnerFactory.SpawnCamera();
+            _cameraFollower.BindTargetTransform(_player.transform);
+            
             SetupPlayer<RunnerPlayerInput>(_player);
         }
 

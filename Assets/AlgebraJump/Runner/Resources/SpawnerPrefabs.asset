@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946540a1b64faab49a468139ba702d9b, type: 3}
+  m_Name: SpawnerPrefabs
+  m_EditorClassIdentifier: 
+  _player: {fileID: 3004975005640280803, guid: e8b739cac4aa7e947859e2b4d15f9666, type: 3}
+  _camera: {fileID: 3509305094178188116, guid: 63258f73881080948ace8deb2877afd3, type: 3}

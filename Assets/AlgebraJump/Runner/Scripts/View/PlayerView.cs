@@ -7,7 +7,7 @@ using UnityEngine.Events;
 namespace Lukomor.AlgebraJump.Runner
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : MonoBehaviour, IPlayer
     {
         public UnityEvent OnPositionChanged;
         
