@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710946301094154242}
-  - component: {fileID: 1967483574825110249}
+  - component: {fileID: 6667528267269011213}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -27,12 +27,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 12}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2518811102853745343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1967483574825110249
+--- !u!212 &6667528267269011213
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 3577299642502005881, guid: 96a2cc40d61328d46b1d5794a461fe58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 0
+  m_Size: {x: 9.29, y: 9.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,12 +95,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518811102853745343}
-  - component: {fileID: 3202131731820545578}
   - component: {fileID: 3004975005640280803}
   - component: {fileID: 1462863910685441164}
   - component: {fileID: 5775520865352959893}
   - component: {fileID: 8763977394481509410}
   - component: {fileID: 6877679926354415072}
+  - component: {fileID: 3923979055438434697}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -125,35 +125,6 @@ Transform:
   - {fileID: 7320054902668397567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3202131731820545578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6468457962545068662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6844eebe8ba3c4ab4d9649773d2d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
-  _propertyName: IsActive
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3004975005640280803}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &3004975005640280803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,8 +178,8 @@ MonoBehaviour:
   _isParentView: 1
   _subViews: []
   _childBinders:
-  - {fileID: 3202131731820545578}
   - {fileID: 6877679926354415072}
+  - {fileID: 3923979055438434697}
 --- !u!61 &5775520865352959893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -296,6 +267,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
   _propertyName: UpdatePlayerPosition
+--- !u!114 &3923979055438434697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468457962545068662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933a87f731cace44c8da069ecfd2741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
+  _propertyName: PositionReset
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3004975005640280803}
+        m_TargetAssemblyTypeName: Lukomor.AlgebraJump.Runner.PlayerView, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8756180108308418584
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7320054902668397567}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

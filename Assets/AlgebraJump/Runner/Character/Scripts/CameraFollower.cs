@@ -26,7 +26,7 @@ namespace Lukomor.AlgebraJump.Runner
             transform.position = nextPosition;
         }
 
-        public void BindTargetTransform(Transform targetTransform)
+        public void RestartCamera(Transform targetTransform)
         {
             _targetTransform = targetTransform;
             transform.position = _targetTransform.position + _offset;

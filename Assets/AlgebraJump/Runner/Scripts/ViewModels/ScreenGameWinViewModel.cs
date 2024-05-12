@@ -11,11 +11,13 @@ namespace Lukomor.AlgebraJump.Runner
 
         private readonly GameSessionService _gameSessionsService;
         private readonly ScenesService _scenesService;
+        private readonly Action _openGameplayScreen;
 
-        public ScreenGameWinViewModel(GameSessionService gameSessionsService, ScenesService scenesService)
+        public ScreenGameWinViewModel(GameSessionService gameSessionsService, ScenesService scenesService, Action openGameplayScreen)
         {
             _gameSessionsService = gameSessionsService;
             _scenesService = scenesService;
+            _openGameplayScreen = openGameplayScreen;
             
             gameSessionsService.GameLose.Subscribe(_ =>
             {
@@ -33,6 +35,7 @@ namespace Lukomor.AlgebraJump.Runner
         public void HandleAgainButtonClick()
         {
             _gameSessionsService.RestartGame();
+            _openGameplayScreen();
         }
 
         public void HandleMainMenuButtonClick()

@@ -11,6 +11,8 @@ namespace Lukomor.AlgebraJump.Runner
         public IObservable<Unit> GameLose { get; }
         public IObservable<Unit> GameWin { get; }
         public IObservable<Unit> GameRestarted { get; }
+        public IObservable<Unit> PausedGame { get; }
+        public IObservable<Unit> UnpausedGame { get; }
         public IReactiveProperty<int> PlayerScore => _playerScore;
         public IReactiveProperty<bool> IsPaused => _isPaused;
         
@@ -26,6 +28,8 @@ namespace Lukomor.AlgebraJump.Runner
         private event Action<Unit> _gameLose;
         private event Action<Unit> _gameWin;
         private event Action<Unit> _restartedGame;
+        private event Action<Unit> _pausedGame;
+        private event Action<Unit> _unpausedGame;
         
         public GameSessionService(float startPointX, float finishPointX)
         {
@@ -40,6 +44,8 @@ namespace Lukomor.AlgebraJump.Runner
             GameLose = Observable.FromEvent<Unit>(a => _gameLose += a, a => _gameLose -= a);
             GameWin = Observable.FromEvent<Unit>(a => _gameWin += a, a => _gameWin -= a);
             GameRestarted = Observable.FromEvent<Unit>(a => _restartedGame += a, a => _restartedGame -= a);
+            PausedGame = Observable.FromEvent<Unit>(a => _pausedGame += a, a => _pausedGame -= a);
+            UnpausedGame = Observable.FromEvent<Unit>(a => _unpausedGame += a, a => _unpausedGame -= a);
         }
 
         public void UpdateScore(float playerPosition)
@@ -58,15 +64,10 @@ namespace Lukomor.AlgebraJump.Runner
             }
         }
 
-        private int WorldToRelativePosition(float playerPosition, int startPointX)
-        {
-            return (int)Math.Round(playerPosition - startPointX);
-        }
-
         public void RestartGame()
         {
             _playerScore.Value = 0;
-
+            
             Unpause();
             
             _restartedGame?.Invoke(Unit.Default);
@@ -82,11 +83,18 @@ namespace Lukomor.AlgebraJump.Runner
         public void Pause()
         {
             _isPaused.Value = true;
+            _pausedGame?.Invoke(Unit.Default);
         }
 
         public void Unpause()
         {
             _isPaused.Value = false;
+            _unpausedGame?.Invoke(Unit.Default);
+        }
+        
+        private int WorldToRelativePosition(float playerPosition, int startPointX)
+        {
+            return (int)Math.Round(playerPosition - startPointX);
         }
     }
 }

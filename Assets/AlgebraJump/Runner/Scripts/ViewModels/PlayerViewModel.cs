@@ -11,6 +11,7 @@ namespace Lukomor.AlgebraJump.Runner
 
         private readonly GameSessionService _gameSessionsService;
         private readonly PlayerView _player;
+        public IObservable<Unit> PositionReset { get; }
 
         public PlayerViewModel(GameSessionService gameSessionsService, PlayerView player)
         {
@@ -18,6 +19,16 @@ namespace Lukomor.AlgebraJump.Runner
             _player = player;
 
             IsActive = _gameSessionsService.IsPaused.Select(value => !value);
+            _gameSessionsService.PausedGame.Subscribe(_ =>
+            {
+                StopMoving();
+            }); 
+            _gameSessionsService.UnpausedGame.Subscribe(_ =>
+            {
+                StartMoving();
+            });
+            
+            PositionReset = gameSessionsService.GameRestarted.Merge(gameSessionsService.GameRestarted);
         }
         
         public void UpdatePlayerPosition()
@@ -25,6 +36,16 @@ namespace Lukomor.AlgebraJump.Runner
             var playerPosition = (int)Math.Round(_player.transform.position.x);
             
             _gameSessionsService.UpdateScore(playerPosition);
+        }
+        
+        public void StopMoving()
+        {
+            _player.StopMoving();
+        }
+        
+        public void StartMoving()
+        {
+            _player.StartMoving();
         }
     }
 }

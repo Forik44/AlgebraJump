@@ -3,6 +3,7 @@ using System.Linq;
 using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 namespace Lukomor.AlgebraJump.Runner
 {
@@ -21,13 +22,15 @@ namespace Lukomor.AlgebraJump.Runner
         
         private bool _isGrounded;
         private Rigidbody2D _rigidbody2D;
+        private Vector3 _initialPosition;
+        private CameraFollower _cameraFollower;
 
         public bool IsActive
         {
             get => enabled;
             set => enabled = value;
         }
-
+        
         public void Jump()
         {
             if (!IsActive || !_isGrounded)
@@ -38,7 +41,37 @@ namespace Lukomor.AlgebraJump.Runner
             _rigidbody2D.velocityY = (float)Math.Sqrt(_jumpHeight * -2 * _gravity);
         }
 
-        bool IsOnTheGround()
+        public void Initialize(Transform transform, CameraFollower cameraFollower)
+        {
+            _initialPosition = transform.position;
+            _cameraFollower = cameraFollower;
+            _cameraFollower.RestartCamera(transform);
+        }
+
+        public void StopMoving()
+        {
+            enabled = false;
+            _rigidbody2D.Sleep();
+        }
+        
+        public void StartMoving()
+        {
+            enabled = true;
+            _rigidbody2D.WakeUp();
+        }
+
+        public void Restart()
+        {
+            transform.position = _initialPosition;
+            _cameraFollower.RestartCamera(transform);
+        }
+        
+        private void Start()
+        {
+            Restart();
+        }
+
+        private bool IsOnTheGround()
         {
             Vector2 groundCheckerPosition = _groundCheckerPivot.position;
             
@@ -50,7 +83,7 @@ namespace Lukomor.AlgebraJump.Runner
         private void Move(Vector3 direction)
         {
             if (!IsActive)
-            { 
+            {
                 return;
             }
             

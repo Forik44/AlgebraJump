@@ -26,10 +26,10 @@ namespace Lukomor.AlgebraJump.Runner
         private void SetupPlayer()
         {
             _player = _spawnerFactory.SpawnPlayer();
-            _player.transform.position = _startPoint.transform.position;
-            
             _cameraFollower = _spawnerFactory.SpawnCamera();
-            _cameraFollower.BindTargetTransform(_player.transform);
+            
+            _player.Initialize(_startPoint.transform, _cameraFollower);
+            
             
             SetupPlayer<RunnerPlayerInput>(_player);
         }
@@ -62,8 +62,12 @@ namespace Lukomor.AlgebraJump.Runner
                     c.Resolve<ScenesService>(),
                     c.Resolve<UIRootGameplayViewModel>().OpenGameplayScreen));
             container.RegisterSingleton(
-                c => new ScreenGameLoseViewModel(c.Resolve<GameSessionService>(),c.Resolve<ScenesService>()));
-            container.RegisterSingleton(c => new ScreenGameWinViewModel(c.Resolve<GameSessionService>(),c.Resolve<ScenesService>()));
+                c => new ScreenGameLoseViewModel(c.Resolve<GameSessionService>(),
+                    c.Resolve<ScenesService>(), 
+                    c.Resolve<UIRootGameplayViewModel>().OpenGameplayScreen));
+            container.RegisterSingleton(c => new ScreenGameWinViewModel(c.Resolve<GameSessionService>(),
+                c.Resolve<ScenesService>(), 
+                c.Resolve<UIRootGameplayViewModel>().OpenGameplayScreen));
             
             container.RegisterSingleton(c => new UIRootGameplayViewModel(
                 () => container.Resolve<ScreenPauseViewModel>(),
