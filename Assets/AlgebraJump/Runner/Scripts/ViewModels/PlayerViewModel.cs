@@ -74,6 +74,9 @@ namespace Lukomor.AlgebraJump.Runner
                 case ZoneType.GravityFlip:
                     _player.FlipGravity();
                     break;
+                case ZoneType.SetFly:
+                    _player.FlipFly();    
+                    break;
             }
         }
         
@@ -92,6 +95,8 @@ namespace Lukomor.AlgebraJump.Runner
                     break;
                 case ZoneType.DoubleJump:
                     _player.SetDoubleJump(false);
+                    break;
+                case ZoneType.SetFly:
                     break;
             }
         }

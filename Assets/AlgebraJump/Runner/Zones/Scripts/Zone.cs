@@ -14,6 +14,7 @@ namespace Lukomor.AlgebraJump.Runner
         Default = 0,
         Damage = 1,
         DoubleJump = 2,
-        GravityFlip = 3
+        GravityFlip = 3,
+        SetFly = 4
     }
 }

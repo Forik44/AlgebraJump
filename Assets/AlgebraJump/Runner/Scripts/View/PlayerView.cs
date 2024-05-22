@@ -27,6 +27,7 @@ namespace Lukomor.AlgebraJump.Runner
         private Vector3 _initialPosition;
         private CameraFollower _cameraFollower;
         private bool _hasDoubleJump;
+        private bool _isFlying;
 
         public bool IsActive
         {
@@ -41,8 +42,11 @@ namespace Lukomor.AlgebraJump.Runner
                return;
             }
 
-            SetDoubleJump(false);
-            
+            if (!_isFlying)
+            {
+                SetDoubleJump(false); 
+            }
+
             _rigidbody2D.velocityY = (float)Math.Sqrt(_jumpHeight * -2 * _gravity) * _rigidbody2D.gravityScale;
         }
 
@@ -81,6 +85,11 @@ namespace Lukomor.AlgebraJump.Runner
         {
             _rigidbody2D.velocityY = 0;
             _rigidbody2D.gravityScale *= -1;
+        }
+        public void FlipFly()
+        {
+            SetDoubleJump(!_isFlying);
+            _isFlying = !_isFlying;
         }
         private void Start()
         {

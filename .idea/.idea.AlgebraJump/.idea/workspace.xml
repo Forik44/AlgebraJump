@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d76a6ee-0802-464e-bd9c-f0dbdca492b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Scripts/Parallax.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpGameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpGameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/RunnerEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/RunnerEntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/PlayerViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/PlayerViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Scripts/Zone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Scripts/Zone.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,13 +141,13 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <condition expression="_rigidbody2D.gravityScale &lt; 0" language="C#" />
           <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/PlayerView.cs</url>
-          <line>45</line>
+          <line>49</line>
           <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Scripts\View\PlayerView.cs" initialLine="45" containingFunctionPresentation="Method 'Jump'">
             <startOffsets>
-              <option value="1399" />
+              <option value="1480" />
             </startOffsets>
             <endOffsets>
-              <option value="1498" />
+              <option value="1579" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
