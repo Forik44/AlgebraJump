@@ -11,6 +11,7 @@ namespace Lukomor.AlgebraJump.Runner
         [SerializeField] private FinishPointView _finishPoint;
         [SerializeField] private View _rootUIView;
         [SerializeField] private SpawnerFactory _spawnerFactory;
+        [SerializeField] private Parallax[] _parallaxBackgrounds;
         
         private PlayerView _player;
         private CameraFollower _cameraFollower;
@@ -18,6 +19,7 @@ namespace Lukomor.AlgebraJump.Runner
         public void Process(DIContainer container)
         {
             SetupPlayer();
+            SetupBackgrounds();
             RegisterViewModels(container);
             BindViewModels(container);
             OpenDefaultScreen(container);
@@ -46,6 +48,14 @@ namespace Lukomor.AlgebraJump.Runner
             inputController = player.gameObject.AddComponent<T>();
 
             inputController.Bind(player);
+        }
+        
+        private void SetupBackgrounds()
+        {
+            foreach (var background in _parallaxBackgrounds)
+            {
+                background.Initialize(_cameraFollower);
+            }
         }
 
         private void RegisterViewModels(DIContainer container)
