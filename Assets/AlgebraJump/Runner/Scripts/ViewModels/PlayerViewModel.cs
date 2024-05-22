@@ -1,17 +1,20 @@
 using System;
-using System.Reactive;
 using System.Reactive.Linq;
 using Lukomor.MVVM;
+using Unity.VisualScripting;
+using UnityEngine;
+using Unit = System.Reactive.Unit;
 
 namespace Lukomor.AlgebraJump.Runner
 {
     public class PlayerViewModel : IViewModel
     {
         public IObservable<bool> IsActive { get; }
+        public IObservable<Unit> PositionReset { get; }
 
         private readonly GameSessionService _gameSessionsService;
         private readonly PlayerView _player;
-        public IObservable<Unit> PositionReset { get; }
+
 
         public PlayerViewModel(GameSessionService gameSessionsService, PlayerView player)
         {
@@ -29,6 +32,9 @@ namespace Lukomor.AlgebraJump.Runner
             });
             
             PositionReset = gameSessionsService.GameRestarted.Merge(gameSessionsService.GameRestarted);
+
+            _player.OnTriggerEnter += OnTriggerEnter;
+            _player.OnTriggerExit += OnTriggerExit;
         }
         
         public void UpdatePlayerPosition()
@@ -46,6 +52,48 @@ namespace Lukomor.AlgebraJump.Runner
         public void StartMoving()
         {
             _player.StartMoving();
+        }
+
+        private void OnTriggerEnter(Collider2D other)
+        {
+            if (!other.TryGetComponent(out Zone zone))
+            {
+                return;
+            }
+
+            switch (zone.ZoneType)
+            {
+                case ZoneType.Default:
+                    break;
+                case ZoneType.Damage:
+                    _gameSessionsService.LoseGame();
+                    break;
+                case ZoneType.DoubleJump:
+                    _player.SetDoubleJump(true);
+                    break;
+                case ZoneType.GravityFlip:
+                    _player.FlipGravity();
+                    break;
+            }
+        }
+        
+        private void OnTriggerExit(Collider2D other)
+        {
+            if (!other.TryGetComponent(out Zone zone))
+            {
+                return;
+            }
+
+            switch (zone.ZoneType)
+            {
+                case ZoneType.Default:
+                    break;
+                case ZoneType.Damage:
+                    break;
+                case ZoneType.DoubleJump:
+                    _player.SetDoubleJump(false);
+                    break;
+            }
         }
     }
 }

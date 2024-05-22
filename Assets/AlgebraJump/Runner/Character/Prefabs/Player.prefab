@@ -152,11 +152,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _speed: 3
+  _speed: 4
   _smoothing: 1
-  _gravity: -9.81
-  _checkGroundRadius: 0.1
-  _jumpHeight: 3
+  _gravity: -7
+  _checkGroundRadius: 0.6
+  _jumpHeight: 2.5
   _groundCheckerPivot: {fileID: 7320054902668397567}
   _groundMask:
     serializedVersion: 2
@@ -252,7 +252,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6877679926354415072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ Transform:
   m_GameObject: {fileID: 8756180108308418584}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

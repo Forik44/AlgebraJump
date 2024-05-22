@@ -11,6 +11,8 @@ namespace Lukomor.AlgebraJump.Runner
     public class PlayerView : MonoBehaviour, IPlayer
     {
         public UnityEvent OnPositionChanged;
+        public event Action<Collider2D> OnTriggerEnter;
+        public event Action<Collider2D> OnTriggerExit;
         
         [SerializeField] private float _speed = 1f;
         [SerializeField] private float _smoothing = 1f;
@@ -24,6 +26,7 @@ namespace Lukomor.AlgebraJump.Runner
         private Rigidbody2D _rigidbody2D;
         private Vector3 _initialPosition;
         private CameraFollower _cameraFollower;
+        private bool _hasDoubleJump;
 
         public bool IsActive
         {
@@ -33,12 +36,14 @@ namespace Lukomor.AlgebraJump.Runner
         
         public void Jump()
         {
-            if (!IsActive || !_isGrounded)
+            if (!_hasDoubleJump && !_isGrounded || !IsActive)
             {
                return;
             }
+
+            SetDoubleJump(false);
             
-            _rigidbody2D.velocityY = (float)Math.Sqrt(_jumpHeight * -2 * _gravity);
+            _rigidbody2D.velocityY = (float)Math.Sqrt(_jumpHeight * -2 * _gravity) * _rigidbody2D.gravityScale;
         }
 
         public void Initialize(Transform transform, CameraFollower cameraFollower)
@@ -64,8 +69,19 @@ namespace Lukomor.AlgebraJump.Runner
         {
             transform.position = _initialPosition;
             _cameraFollower.RestartCamera(transform);
+            _rigidbody2D.gravityScale = 1;
+        }
+
+        public void SetDoubleJump(bool doubleJump)
+        {
+            _hasDoubleJump = doubleJump;
         }
         
+        public void FlipGravity()
+        {
+            _rigidbody2D.velocityY = 0;
+            _rigidbody2D.gravityScale *= -1;
+        }
         private void Start()
         {
             Restart();
@@ -75,7 +91,7 @@ namespace Lukomor.AlgebraJump.Runner
         {
             Vector2 groundCheckerPosition = _groundCheckerPivot.position;
             
-            RaycastHit2D hit = Physics2D.Raycast(groundCheckerPosition, -Vector2.up, _checkGroundRadius, _groundMask);
+            RaycastHit2D hit = Physics2D.Raycast(groundCheckerPosition, -Vector2.up * _rigidbody2D.gravityScale, _checkGroundRadius, _groundMask);
             
             return hit.collider != null;
         }
@@ -102,12 +118,24 @@ namespace Lukomor.AlgebraJump.Runner
         {
             _isGrounded = IsOnTheGround();
             
-            if (_isGrounded && _rigidbody2D.velocityY <= 0)
+            if (_isGrounded && _rigidbody2D.velocityY * _rigidbody2D.gravityScale <= 0)
             { 
-                _rigidbody2D.velocityY = -2;
+                _rigidbody2D.velocityY = -2 * _rigidbody2D.gravityScale;
             }
             
             Move(Vector2.right);
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            OnTriggerEnter?.Invoke(other);
+            Debug.Log("OnTriggerEnter2D");
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            OnTriggerExit?.Invoke(other);
+            Debug.Log("OnTriggerExit");
         }
     }
 }

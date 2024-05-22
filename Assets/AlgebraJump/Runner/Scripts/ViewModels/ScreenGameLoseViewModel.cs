@@ -38,7 +38,7 @@ namespace Lukomor.AlgebraJump.Runner
         
         private void UpdateResultText(GameSessionService gameSessionsService)
         {
-            _resultText.Value = $"{gameSessionsService.PlayerScore} / {gameSessionsService.ScoreLimit}";
+            _resultText.Value = $"{gameSessionsService.PlayerScore.Value} / {gameSessionsService.ScoreLimit}";
         }
         
         public void HandleAgainButtonClick()
