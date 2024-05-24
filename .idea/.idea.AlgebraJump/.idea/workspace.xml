@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d76a6ee-0802-464e-bd9c-f0dbdca492b0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneTriangle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneTriangle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/PlayerResources.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/PlayerResources.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Camera/CameraFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Camera/CameraFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/PlayerViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/PlayerViewModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerViewModel.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +139,7 @@
       <workItem from="1716454958237" duration="6584000" />
       <workItem from="1716478814135" duration="4657000" />
       <workItem from="1716483948053" duration="8790000" />
-      <workItem from="1716548586866" duration="10341000" />
+      <workItem from="1716548586866" duration="10946000" />
     </task>
     <servers />
   </component>

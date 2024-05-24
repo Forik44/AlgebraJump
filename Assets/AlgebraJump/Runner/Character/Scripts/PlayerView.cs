@@ -89,11 +89,11 @@ namespace Lukomor.AlgebraJump.Runner
 
             if (_rigidbody2D.gravityScale == 1)
             {
-                SetCameraFollowMode(CameraFollowMode.Default);
+                _cameraFollower.SetCameraFollowMode(CameraFollowMode.Default);
             }
             else if (_rigidbody2D.gravityScale == -1)
             {
-                SetCameraFollowMode(CameraFollowMode.FlipGravity);
+                _cameraFollower.SetCameraFollowMode(CameraFollowMode.FlipGravity);
             }
         }
         public void FlipFlyState()
@@ -110,11 +110,13 @@ namespace Lukomor.AlgebraJump.Runner
         }
         public void StartFly()
         {
+            _cameraFollower.SetCameraFollowMode(CameraFollowMode.FlyState);
             PlayerState.TryStartFly = true;
         }
         
         public void StopFly()
         {
+            _cameraFollower.SetCameraFollowMode(CameraFollowMode.Default);
             PlayerState.TryStopFly = true;
         }
         
@@ -153,11 +155,6 @@ namespace Lukomor.AlgebraJump.Runner
             _rigidbody2D.velocityY = -2 * _rigidbody2D.gravityScale;
         }
 
-        public void SetCameraFollowMode(CameraFollowMode followMode)
-        {
-            _cameraFollower.CameraMode = followMode;
-        }
-        
         public void LerpFlyVelocity()
         {
             Vector2 MaxVelosity = new Vector2(_rigidbody2D.velocity.x, _playerResources.MaxFlyVelosityY);
