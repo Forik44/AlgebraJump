@@ -5,110 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d76a6ee-0802-464e-bd9c-f0dbdca492b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Prefabs/Windows.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures/helicopter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures/helicopter.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Camera.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Camera/CameraFollower.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Factories.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerResources.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerResources.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/FlyState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/FlyState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/StateMachine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/StateMachine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Resources/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/WallColumn.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/WallColumn.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Resources/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DamageZone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DamageZone.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DoubleJumpZone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DoubleJumpZone.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipFlyStateZone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipFlyStateZone.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipGravityZone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipGravityZone.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/IZone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/PlayerResources.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/PlayerResources.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpBoot.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpBoot.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpBoot.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpBoot.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpGameplay.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpGameplay.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpMainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpMainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/AlgebraJumpMainMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpMainMenu.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture/Okabe.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Resources/Textures/Okabe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture/Okabe.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Resources/Textures/Okabe.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture/makise.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures/makise.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture/makise.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures/makise.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture/primougolnik.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Resources/Textures/primougolnik.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Texture/primougolnik.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Resources/Textures/primougolnik.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/CameraFollower.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/CameraFollower.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Camera/CameraFollower.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/IPlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/IPlayer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/SpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Factories/SpawnerFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/SpawnerFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Factories/SpawnerFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Scripts/Parallax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Scripts/Parallax.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Scripts/Parallax.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Scripts/Parallax.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Prefabs/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Camera.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Prefabs/Camera.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/MainMenuWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Prefabs/Windows/MainMenuWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/MainMenuWindow.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Prefabs/Windows/MainMenuWindow.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Resources/Textures/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Resources/Textures/background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/square.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures/square.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Textures/square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Background/Resources/Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/GameEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/GameEntryPoint.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameEntryPoint.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/MainMenuEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Scripts/MainMenuEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/MainMenuEntryPoint.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Scripts/MainMenuEntryPoint.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/RunnerEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/EntryPoints/RunnerEntryPoint.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/RunnerPlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/RunnerPlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/FloorView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/FloorView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/View/PlayerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/PlayerViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/PlayerViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/WallBottom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/WallBottom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/WallBottom.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/WallBottom.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/Zone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/DamageZone.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/Zone.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/DamageZone.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneDoubleJump.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneDoubleJump.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneDoubleJump.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneDoubleJump.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneFlyPortal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneFlyPortal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneFlyPortal.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneFlyPortal.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneGravityFlip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneGravityFlip.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneGravityFlip.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneGravityFlip.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneTriangle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneTriangle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Prefabs/ZoneTriangle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneTriangle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Scripts/Zone.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Zones/Scripts/Zone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/IZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneTriangle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/ZoneTriangle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/PlayerResources.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/PlayerResources.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +142,7 @@
       <workItem from="1716454958237" duration="6584000" />
       <workItem from="1716478814135" duration="4657000" />
       <workItem from="1716483948053" duration="8790000" />
-      <workItem from="1716548586866" duration="8929000" />
+      <workItem from="1716548586866" duration="10341000" />
     </task>
     <servers />
   </component>
@@ -272,10 +175,10 @@
           <line>33</line>
           <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\JumpState.cs" initialLine="33" containingFunctionPresentation="Method 'LogicUpdate'">
             <startOffsets>
-              <option value="787" />
+              <option value="879" />
             </startOffsets>
             <endOffsets>
-              <option value="829" />
+              <option value="921" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />

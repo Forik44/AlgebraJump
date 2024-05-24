@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87348f05b3aa4a399c5a15c9ea5f65e7, type: 3}
   m_Name: PlayerResources
   m_EditorClassIdentifier: 
-  Speed: 1.9
-  Smoothing: 2
-  FlySmoothing: 4
-  MaxFlyVelosityY: 10
-  FlySprite: {fileID: -1604708741874733367, guid: 0ed223145f36f8341bc9c5b4d66824ee, type: 3}
+  _speed: 1.6
+  _smoothing: 2.5
+  _flySmoothing: 2
+  _maxFlyVelosityY: 10
+  _flySprite: {fileID: -1604708741874733367, guid: 0ed223145f36f8341bc9c5b4d66824ee, type: 3}

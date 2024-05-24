@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,6 +18,10 @@ namespace Lukomor.AlgebraJump.Runner
             if (_player.CanJump())
             {
                 _player.Jump();
+            }
+            else
+            {
+                TryJump = false;
             }
             
             _isGrounded = false;
