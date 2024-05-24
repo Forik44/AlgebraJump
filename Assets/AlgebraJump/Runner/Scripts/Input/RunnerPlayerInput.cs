@@ -6,10 +6,7 @@ namespace Lukomor.AlgebraJump.Runner
     {
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Player.Jump();
-            }
+            
         }
     }
 }
