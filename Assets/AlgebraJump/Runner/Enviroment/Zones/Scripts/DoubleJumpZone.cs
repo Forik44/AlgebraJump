@@ -4,7 +4,7 @@ namespace Lukomor.AlgebraJump.Runner
     {
         public override void Enter(GameSessionService gameSessionService, PlayerView player)
         {
-            player.SetDoubleJump(true);
+              player.SetDoubleJump(true);
         }
 
         public override void Exit(GameSessionService gameSessionService, PlayerView player)

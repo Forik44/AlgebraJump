@@ -32,11 +32,11 @@ namespace Lukomor.AlgebraJump.Runner
 
             transform.position = new Vector3(_startPosition + distance, transform.position.y, transform.position.z);
 
-            if (bound > _startPosition + _lenght)
+            if (bound > _startPosition + _lenght/2)
             {
                 _startPosition += _lenght;
             }
-            else if (bound < _startPosition - _lenght)
+            else if (bound < _startPosition - _lenght/2)
             {
                 _startPosition -= _lenght;
             }

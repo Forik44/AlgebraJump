@@ -14,8 +14,7 @@ namespace Lukomor.AlgebraJump.Runner
 
         private readonly GameSessionService _gameSessionService;
         private readonly PlayerView _player;
-
-
+        
         public PlayerViewModel(GameSessionService gameSessionService, PlayerView player)
         {
             _gameSessionService = gameSessionService;

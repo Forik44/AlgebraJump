@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4685471111596480912}
   - component: {fileID: 3434003987727579202}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1563719373813679821}
   - component: {fileID: 7935895815646194746}
   - component: {fileID: 4548204789835802760}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ZoneTriangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

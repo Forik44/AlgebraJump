@@ -11,7 +11,7 @@ namespace Lukomor.AlgebraJump.Runner
 
         public override void Exit(GameSessionService gameSessionService, PlayerView player)
         {
-            player.FlipFlyState();
+            
         }
     }
 }

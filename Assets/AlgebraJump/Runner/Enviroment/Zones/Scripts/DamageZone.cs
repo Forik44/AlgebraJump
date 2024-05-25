@@ -6,6 +6,7 @@ namespace Lukomor.AlgebraJump.Runner
     {
         public override void Enter(GameSessionService gameSessionService, PlayerView player)
         {
+            player.Die();
             gameSessionService.LoseGame();
         }
 

@@ -1,21 +1,21 @@
 namespace Lukomor.AlgebraJump.Runner
 {
-    public class StateMachine
+    public abstract class StateMachine
     {
-        public PlayerState CurrentState { get; private set; }
+        public State CurrentState { get; private set; }
         
-        public void Initialize(PlayerState startingState)
+        public void Initialize(State startingMovementState)
         {
-            CurrentState = startingState;
-            startingState.Enter();
+            CurrentState = startingMovementState;
+            startingMovementState.Enter();
         }
 
-        public void ChangeState(PlayerState newState)
+        protected void ChangeState(State newMovementState)
         {
             CurrentState.Exit();
 
-            CurrentState = newState;
-            newState.Enter();
+            CurrentState = newMovementState;
+            newMovementState.Enter();
         }
     }
 }

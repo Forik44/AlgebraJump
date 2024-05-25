@@ -10,26 +10,24 @@ namespace Lukomor.AlgebraJump.Runner
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerView : MonoBehaviour
     {
-        public StateMachine MovementSM;
-        public RunState Running;
-        public JumpState Jumping;
-        public FlyState Flying;
-
         public UnityEvent OnPositionChanged;
         public event Action<Collider2D> OnTriggerEnter;
         public event Action<Collider2D> OnTriggerExit;
         
         [SerializeField] private float _gravity = -9.81f;
-        [SerializeField] private float _checkGroundRadius = 0.3f;
+        [SerializeField] private float _checkGroundRadius = 0.5f;
         [SerializeField] private float _jumpHeight = 3f;
         [SerializeField] private Transform _groundCheckerPivot;
         [SerializeField] private LayerMask _groundMask;
-
+        [SerializeField] private Animator _animator;
+        [SerializeField] private Transform _visualRoot;
+        
         private Rigidbody2D _rigidbody2D;
         private Vector3 _initialPosition;
         private CameraFollower _cameraFollower;
         private PlayerResources _playerResources;
         private bool _hasDoubleJump = false;
+        private PlayerMovementStateMachine _movementStateMachine;
 
         public bool IsActive
         {
@@ -72,9 +70,12 @@ namespace Lukomor.AlgebraJump.Runner
             transform.position = _initialPosition;
             _cameraFollower.RestartCamera(transform);
             _rigidbody2D.gravityScale = 1;
+            _visualRoot.localScale = new Vector3(_visualRoot.localScale.x,MathF.Abs(_visualRoot.localScale.y),_visualRoot.localScale.z);
 
-            PlayerState.TryStartFly = false;
-            MovementSM.ChangeState(Running);
+            PlayerMovementState.TryStartFly = false;
+            _movementStateMachine.RestartMachine();
+
+            RestartAnimator();
         }
 
         public void SetDoubleJump(bool doubleJump)
@@ -84,21 +85,25 @@ namespace Lukomor.AlgebraJump.Runner
         
         public void FlipGravity()
         {
+            //TODO: зарефакторить изменение гравитации через машину состояний
+            
             _rigidbody2D.velocityY = 0;
             _rigidbody2D.gravityScale *= -1;
 
-            if (_rigidbody2D.gravityScale == 1)
+            _visualRoot.localScale = new Vector3(_visualRoot.localScale.x,-_visualRoot.localScale.y,_visualRoot.localScale.z);
+
+            if (Math.Abs(_rigidbody2D.gravityScale - 1) < 0.01)
             {
                 _cameraFollower.SetCameraFollowMode(CameraFollowMode.Default);
             }
-            else if (_rigidbody2D.gravityScale == -1)
+            else if (Math.Abs(_rigidbody2D.gravityScale + 1) < 0.01)
             {
                 _cameraFollower.SetCameraFollowMode(CameraFollowMode.FlipGravity);
             }
         }
         public void FlipFlyState()
         {
-            if (MovementSM.CurrentState != Flying)
+            if (!_movementStateMachine.IsFlying())
             {
                 StartFly();
             }
@@ -106,18 +111,17 @@ namespace Lukomor.AlgebraJump.Runner
             {
                 StopFly();
             }
-            //TODO: тернарный оператор
         }
         public void StartFly()
         {
             _cameraFollower.SetCameraFollowMode(CameraFollowMode.FlyState);
-            PlayerState.TryStartFly = true;
+            PlayerMovementState.TryStartFly = true;
         }
         
         public void StopFly()
         {
             _cameraFollower.SetCameraFollowMode(CameraFollowMode.Default);
-            PlayerState.TryStopFly = true;
+            PlayerMovementState.TryStopFly = true;
         }
         
         public void SetPosition(Vector3 nextPosition)
@@ -134,17 +138,26 @@ namespace Lukomor.AlgebraJump.Runner
             
             return hit.collider != null;
         }
-        
         public bool CanJump()
         {
             return IsOnTheGround() || _hasDoubleJump;
         }
-        private void Start()
+
+        public void SetJumpAnimation(bool isActive)
         {
-            InitializeStateMachine();
-            Restart();
+            _animator.SetBool("Jump", isActive);
         }
         
+        public void SetFlyAnimation(bool isActive)
+        {
+            _animator.SetBool("Fly", isActive);
+        }
+        
+        public void SetDieAnimation()
+        {
+            _animator.SetTrigger("Die");
+        }
+
         public bool CheckNegativeVelocity()
         {
             return _rigidbody2D.velocityY * _rigidbody2D.gravityScale <= 0;
@@ -161,44 +174,65 @@ namespace Lukomor.AlgebraJump.Runner
 
             _rigidbody2D.velocity = Vector2.Lerp(_rigidbody2D.velocity,MaxVelosity, Time.fixedDeltaTime * _playerResources.FlySmoothing);;
         }
-
+        
+        public void Die()
+        {
+            _movementStateMachine.SetDyingState();
+        }
+        
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
         }
+
+        private void Start()
+        {
+            InitializeStateMachine();
+            Restart();
+        }
         
         private void InitializeStateMachine()
         {
-            MovementSM = new StateMachine();
-
-            Running = new RunState(this, MovementSM, _playerResources);
-            Jumping = new JumpState(this, MovementSM, _playerResources);
-            Flying = new FlyState(this, MovementSM, _playerResources);
-
-            MovementSM.Initialize(Running);
+            _movementStateMachine = new PlayerMovementStateMachine(this,_playerResources);
         }
 
         private void Update()
         {
-            MovementSM.CurrentState.HandleInput();
-            MovementSM.CurrentState.LogicUpdate();
+            _movementStateMachine.CurrentState.HandleInput();
+            _movementStateMachine.CurrentState.LogicUpdate();
         }
 
         private void FixedUpdate()
         {
-            MovementSM.CurrentState.PhysicsUpdate();
+            _movementStateMachine.CurrentState.PhysicsUpdate();
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (!IsActive)
+            {
+                return;
+            }
             OnTriggerEnter?.Invoke(other);
             Debug.Log("OnTriggerEnter2D");
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (!IsActive)
+            {
+                return;
+            }
             OnTriggerExit?.Invoke(other);
             Debug.Log("OnTriggerExit");
+        }
+        
+        private void RestartAnimator()
+        {
+            SetFlyAnimation(false);
+            SetJumpAnimation(false);
+            
+            _animator.SetTrigger("Restart");
         }
     }
 }
