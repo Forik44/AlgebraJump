@@ -33,7 +33,6 @@ namespace Lukomor.AlgebraJump.Runner
             
             _player.Initialize(_startPoint.transform, _cameraFollower, _playerResources);
             
-            
             SetupPlayer<RunnerPlayerInput>(_player);
         }
 

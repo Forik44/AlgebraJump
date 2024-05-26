@@ -14,7 +14,7 @@ namespace Lukomor.AlgebraJump.Runner
         public override void Enter()
         {
             Debug.Log("Enter FlyState");
-            _player.SetFlyAnimation(true);
+            _player.SetFlyAnimation();
         }
 
         public override void HandleInput()
@@ -46,7 +46,6 @@ namespace Lukomor.AlgebraJump.Runner
         public override void Exit()
         {
             Debug.Log("Exit FlyState");
-            _player.SetFlyAnimation(false);
         }
     }
 }

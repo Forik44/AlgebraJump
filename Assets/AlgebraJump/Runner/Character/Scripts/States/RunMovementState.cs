@@ -13,6 +13,7 @@ namespace Lukomor.AlgebraJump.Runner
         public override void Enter()
         {
             Debug.Log("Enter RunState");
+            _player.SetRunAnimation();
         }
 
         public override void HandleInput()

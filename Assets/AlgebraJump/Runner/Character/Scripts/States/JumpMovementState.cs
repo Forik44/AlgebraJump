@@ -18,7 +18,7 @@ namespace Lukomor.AlgebraJump.Runner
             if (_player.CanJump())
             {
                 _player.Jump();
-                _player.SetJumpAnimation(true);
+                _player.SetJumpAnimation();
             }
             else
             {
@@ -65,7 +65,6 @@ namespace Lukomor.AlgebraJump.Runner
         public override void Exit()
         {
             Debug.Log("Exit JumpState");
-            _player.SetJumpAnimation(false);
         }
     }
 }

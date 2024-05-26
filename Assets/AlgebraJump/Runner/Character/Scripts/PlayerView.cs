@@ -143,19 +143,24 @@ namespace Lukomor.AlgebraJump.Runner
             return IsOnTheGround() || _hasDoubleJump;
         }
 
-        public void SetJumpAnimation(bool isActive)
+        public void SetJumpAnimation()
         {
-            _animator.SetBool("Jump", isActive);
+            _animator.SetTrigger("Jump");
         }
         
-        public void SetFlyAnimation(bool isActive)
+        public void SetFlyAnimation()
         {
-            _animator.SetBool("Fly", isActive);
+            _animator.SetTrigger("Fly");
         }
         
         public void SetDieAnimation()
         {
             _animator.SetTrigger("Die");
+        }
+        
+        public void SetRunAnimation()
+        {
+            _animator.SetTrigger("Run");
         }
 
         public bool CheckNegativeVelocity()
@@ -229,10 +234,8 @@ namespace Lukomor.AlgebraJump.Runner
         
         private void RestartAnimator()
         {
-            SetFlyAnimation(false);
-            SetJumpAnimation(false);
-            
             _animator.SetTrigger("Restart");
+            _animator.ResetTrigger("Run");
         }
     }
 }
