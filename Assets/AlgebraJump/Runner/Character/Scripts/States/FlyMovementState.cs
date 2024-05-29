@@ -6,7 +6,7 @@ namespace Lukomor.AlgebraJump.Runner
     public class FlyMovementState : PlayerMovementState
     {
         private bool _upPressed;
-        public FlyMovementState(PlayerView player, PlayerMovementStateMachine stateMachine, PlayerResources playerResources) : base(player, stateMachine, playerResources)
+        public FlyMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
         {
             
         }
@@ -24,10 +24,10 @@ namespace Lukomor.AlgebraJump.Runner
 
         public override void LogicUpdate()
         {
-            if (TryStopFly)
+            if (_player.TryStopFly)
             {
-                _stateMachine.SetRunningState();
-                TryStopFly = false;
+                _player.MovementStateMachine.SetRunningState();
+                _player.TryStopFly = false;
                 return;
             }
         }

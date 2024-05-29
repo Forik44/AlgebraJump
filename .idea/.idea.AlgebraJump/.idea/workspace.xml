@@ -6,16 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0d76a6ee-0802-464e-bd9c-f0dbdca492b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Prefabs/Windows/MainMenuWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/MainMenu/Prefabs/Windows/MainMenuWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Animation/sword_man.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Animation/sword_man.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/DieMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/DieMovementState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/FlyMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/FlyMovementState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpMovementState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/GameLoseWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/GameLoseWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/GameWinWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/GameWinWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/PauseWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/PauseWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/RunnerWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Prefabs/Windows/RunnerWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +149,9 @@
       <workItem from="1716548586866" duration="11788000" />
       <workItem from="1716573171231" duration="5941000" />
       <workItem from="1716651630473" duration="9493000" />
-      <workItem from="1716729736839" duration="2185000" />
+      <workItem from="1716729736839" duration="2920000" />
+      <workItem from="1716922113012" duration="1208000" />
+      <workItem from="1717007820404" duration="514000" />
     </task>
     <servers />
   </component>
@@ -183,10 +183,10 @@
           <line>13</line>
           <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\DieMovementState.cs" initialLine="13" containingFunctionPresentation="Method 'Enter'">
             <startOffsets>
-              <option value="393" />
+              <option value="338" />
             </startOffsets>
             <endOffsets>
-              <option value="421" />
+              <option value="366" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
@@ -196,23 +196,23 @@
           <line>31</line>
           <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\PlayerMovementStateMachine.cs" initialLine="31" containingFunctionPresentation="Method 'SetFlyingState'">
             <startOffsets>
-              <option value="999" />
+              <option value="975" />
             </startOffsets>
             <endOffsets>
-              <option value="1020" />
+              <option value="996" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs</url>
-          <line>105</line>
+          <line>111</line>
           <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\PlayerView.cs" initialLine="105" containingFunctionPresentation="Method 'FlipFlyState'">
             <startOffsets>
-              <option value="3451" />
+              <option value="3637" />
             </startOffsets>
             <endOffsets>
-              <option value="3489" />
+              <option value="3674" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="22" />

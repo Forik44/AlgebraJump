@@ -9,10 +9,10 @@ namespace Lukomor.AlgebraJump.Runner
 
         public PlayerMovementStateMachine(PlayerView player, PlayerResources playerResources)
         {
-            _running = new RunMovementState(player, this, playerResources);
-            _jumping = new JumpMovementState(player, this, playerResources);
-            _flying = new FlyMovementState(player, this, playerResources);
-            _dying = new DieMovementState(player, this, playerResources);
+            _running = new RunMovementState(player, playerResources);
+            _jumping = new JumpMovementState(player, playerResources);
+            _flying = new FlyMovementState(player, playerResources);
+            _dying = new DieMovementState(player, playerResources);
             
             Initialize(_running);
         }

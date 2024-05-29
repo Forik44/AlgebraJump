@@ -5,19 +5,12 @@ namespace Lukomor.AlgebraJump.Runner
 {
     public abstract class PlayerMovementState : State
     {
-        //TODO: Придумать что сделать с паблик статик, выглядит разъёбно
-        public static bool TryStartFly = false;
-        public static bool TryStopFly = false;
-        public static bool TryJump = false;
-
         protected readonly PlayerView _player;
-        protected readonly PlayerMovementStateMachine _stateMachine;
         protected readonly PlayerResources _playerResources;
 
-        protected PlayerMovementState(PlayerView player, PlayerMovementStateMachine stateMachine, PlayerResources playerResources)
+        protected PlayerMovementState(PlayerView player, PlayerResources playerResources)
         {
             _player = player;
-            _stateMachine = stateMachine;
             _playerResources = playerResources;
         }
 
@@ -25,9 +18,10 @@ namespace Lukomor.AlgebraJump.Runner
 
         public override void HandleInput()
         {
+            //TODO:Перенести
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                TryJump = true;
+                _player.TryJump = true;
             }
         }
         public override void LogicUpdate() { }
@@ -38,7 +32,7 @@ namespace Lukomor.AlgebraJump.Runner
 
         public void SetDieState()
         {
-            _stateMachine.SetDyingState();
+            _player.MovementStateMachine.SetDyingState();
         }
 
         protected void Move(Vector3 direction)

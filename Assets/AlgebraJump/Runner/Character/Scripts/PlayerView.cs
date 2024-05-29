@@ -14,6 +14,11 @@ namespace Lukomor.AlgebraJump.Runner
         public event Action<Collider2D> OnTriggerEnter;
         public event Action<Collider2D> OnTriggerExit;
         
+        public PlayerMovementStateMachine MovementStateMachine { get; private set; }
+        public bool TryStartFly = false;
+        public bool TryStopFly = false;
+        public bool TryJump = false;
+        
         [SerializeField] private float _gravity = -9.81f;
         [SerializeField] private float _checkGroundRadius = 0.5f;
         [SerializeField] private float _jumpHeight = 3f;
@@ -27,7 +32,6 @@ namespace Lukomor.AlgebraJump.Runner
         private CameraFollower _cameraFollower;
         private PlayerResources _playerResources;
         private bool _hasDoubleJump = false;
-        private PlayerMovementStateMachine _movementStateMachine;
 
         public bool IsActive
         {
@@ -72,8 +76,10 @@ namespace Lukomor.AlgebraJump.Runner
             _rigidbody2D.gravityScale = 1;
             _visualRoot.localScale = new Vector3(_visualRoot.localScale.x,MathF.Abs(_visualRoot.localScale.y),_visualRoot.localScale.z);
 
-            PlayerMovementState.TryStartFly = false;
-            _movementStateMachine.RestartMachine();
+            TryStartFly = false;
+            TryStopFly = false;
+            TryJump = false;
+            MovementStateMachine.RestartMachine();
 
             RestartAnimator();
         }
@@ -103,7 +109,7 @@ namespace Lukomor.AlgebraJump.Runner
         }
         public void FlipFlyState()
         {
-            if (!_movementStateMachine.IsFlying())
+            if (!MovementStateMachine.IsFlying())
             {
                 StartFly();
             }
@@ -115,13 +121,13 @@ namespace Lukomor.AlgebraJump.Runner
         public void StartFly()
         {
             _cameraFollower.SetCameraFollowMode(CameraFollowMode.FlyState);
-            PlayerMovementState.TryStartFly = true;
+            TryStartFly = true;
         }
         
         public void StopFly()
         {
             _cameraFollower.SetCameraFollowMode(CameraFollowMode.Default);
-            PlayerMovementState.TryStopFly = true;
+            TryStopFly = true;
         }
         
         public void SetPosition(Vector3 nextPosition)
@@ -182,7 +188,7 @@ namespace Lukomor.AlgebraJump.Runner
         
         public void Die()
         {
-            _movementStateMachine.SetDyingState();
+            MovementStateMachine.SetDyingState();
         }
         
         private void Awake()
@@ -198,18 +204,18 @@ namespace Lukomor.AlgebraJump.Runner
         
         private void InitializeStateMachine()
         {
-            _movementStateMachine = new PlayerMovementStateMachine(this,_playerResources);
+            MovementStateMachine = new PlayerMovementStateMachine(this,_playerResources);
         }
 
         private void Update()
         {
-            _movementStateMachine.CurrentState.HandleInput();
-            _movementStateMachine.CurrentState.LogicUpdate();
+            MovementStateMachine.CurrentState.HandleInput();
+            MovementStateMachine.CurrentState.LogicUpdate();
         }
 
         private void FixedUpdate()
         {
-            _movementStateMachine.CurrentState.PhysicsUpdate();
+            MovementStateMachine.CurrentState.PhysicsUpdate();
         }
 
         private void OnTriggerEnter2D(Collider2D other)

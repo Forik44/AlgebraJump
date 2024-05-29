@@ -4,7 +4,7 @@ namespace Lukomor.AlgebraJump.Runner
 {
     public class DieMovementState : PlayerMovementState
     {
-        public DieMovementState(PlayerView player, PlayerMovementStateMachine stateMachine, PlayerResources playerResources) : base(player, stateMachine, playerResources)
+        public DieMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
         {
             
         }

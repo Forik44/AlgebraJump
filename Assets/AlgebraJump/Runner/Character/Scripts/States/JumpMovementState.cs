@@ -7,7 +7,7 @@ namespace Lukomor.AlgebraJump.Runner
     public class JumpMovementState : PlayerMovementState
     {
         private bool _isGrounded = false;
-        public JumpMovementState(PlayerView player, PlayerMovementStateMachine stateMachine, PlayerResources playerResources) : base(player, stateMachine, playerResources)
+        public JumpMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
         {
 
         }
@@ -22,7 +22,7 @@ namespace Lukomor.AlgebraJump.Runner
             }
             else
             {
-                TryJump = false;
+                _player.TryJump = false;
             }
             
             _isGrounded = false;
@@ -35,23 +35,23 @@ namespace Lukomor.AlgebraJump.Runner
 
         public override void LogicUpdate()
         {
-            if (TryStartFly)
+            if (_player.TryStartFly)
             {
-                _stateMachine.SetFlyingState();
-                TryStartFly = false;
+                _player.MovementStateMachine.SetFlyingState();
+                _player.TryStartFly = false;
                 return;
             }
 
             if (_isGrounded && _player.CheckNegativeVelocity())
             {
-                _stateMachine.SetRunningState();
+                _player.MovementStateMachine.SetRunningState();
                 return;
             }
 
-            if (TryJump)
+            if (_player.TryJump)
             {
-                _stateMachine.SetJumpState();
-                TryJump = false;
+                _player.MovementStateMachine.SetJumpState();
+                _player.TryJump = false;
                 return;
             }
         }
