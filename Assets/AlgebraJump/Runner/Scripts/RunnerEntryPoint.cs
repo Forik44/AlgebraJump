@@ -1,9 +1,10 @@
 using System;
+using AlgebraJump.Bank;
 using Lukomor.DI;
 using Lukomor.MVVM;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class RunnerEntryPoint : MonoBehaviour
     {
@@ -21,6 +22,7 @@ namespace Lukomor.AlgebraJump.Runner
         {
             SetupPlayer();
             SetupBackgrounds();
+            RegisterServices(container);
             RegisterViewModels(container);
             BindViewModels(container);
             OpenDefaultScreen(container);
@@ -57,11 +59,16 @@ namespace Lukomor.AlgebraJump.Runner
                 background.Initialize(_cameraFollower);
             }
         }
+        
+        private void RegisterServices(DIContainer container)
+        {
+            container.RegisterSingleton(c => new GameSessionService(c.Resolve<BankService>(),_startPoint.transform.position.x, _finishPoint.transform.position.x));
+        }
 
         private void RegisterViewModels(DIContainer container)
         {
-            container.RegisterSingleton(c => new GameSessionService(_startPoint.transform.position.x, _finishPoint.transform.position.x));
-            container.RegisterSingleton(c => new PlayerViewModel(c.Resolve<GameSessionService>(), _player));
+            container.RegisterSingleton(
+                c => new PlayerViewModel(c.Resolve<GameSessionService>(), _player));
             // UI
             
             container.RegisterSingleton(
@@ -87,6 +94,7 @@ namespace Lukomor.AlgebraJump.Runner
                 c.Resolve<GameSessionService>()
             ));
         }
+        
 
         private void BindViewModels(DIContainer container)
         {

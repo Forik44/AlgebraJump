@@ -2,7 +2,7 @@ using System;
 using System.Reactive.Linq;
 using Lukomor.Reactive;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class ScreenGameplayViewModel : ScreenViewModel
     {

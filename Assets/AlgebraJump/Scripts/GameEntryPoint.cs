@@ -1,33 +1,59 @@
+using AlgebraJump.Bank;
+using AlgebraJump.Scripts;
 using Lukomor.DI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class GameEntryPoint
     {
         private static GameEntryPoint _instance;
 
         private DIContainer _rootContainer;
+        private GameStatePlayerProvider _gameStateProvider;
+        private ScenesService _scenesService;
+        private BankService _bankService;
         
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void StartGame()
         {
             _instance = new GameEntryPoint();
             _instance.Init();
-            Debug.Log("StartGame");
         }
 
         private void Init()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             _rootContainer = new DIContainer();
-            
-            var scenesService = _rootContainer
+
+            InitProviders();
+            InitServices();
+
+            var sceneName = _scenesService.GetActiveSceneName();
+
+            LoadScene(sceneName);
+        }
+
+        private void InitProviders()
+        {
+            _gameStateProvider = new GameStatePlayerProvider();
+            _gameStateProvider.LoadGameState();
+        }
+
+        private void InitServices()
+        {
+            _scenesService = _rootContainer
                 .RegisterSingleton(_ => new ScenesService())
                 .CreateInstance();
-            var sceneName = scenesService.GetActiveSceneName();
 
+            _bankService = _rootContainer
+                .RegisterSingleton(_ => new BankService(_gameStateProvider.GameState.BankData, _gameStateProvider))
+                .CreateInstance();
+        }
+
+        private void LoadScene(string sceneName)
+        {
             if (sceneName == ScenesService.SCENE_GAMEPLAY)
             {
                 StartGameplay();
@@ -43,10 +69,10 @@ namespace Lukomor.AlgebraJump.Runner
 
             if (sceneName != ScenesService.SCENE_BOOT)
             {
-                return; // If scene isn't from the example project - do nothing.
+                return;
             }
-            
-            scenesService.LoadMainMenuScene();
+
+            _scenesService.LoadMainMenuScene();
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class Parallax : MonoBehaviour
     {

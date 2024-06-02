@@ -2,7 +2,7 @@ using Lukomor.DI;
 using Lukomor.MVVM;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class MainMenuEntryPoint : MonoBehaviour
     {

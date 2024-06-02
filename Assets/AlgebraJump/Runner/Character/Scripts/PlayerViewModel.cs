@@ -1,11 +1,12 @@
 using System;
 using System.Reactive.Linq;
+using AlgebraJump.Bank;
 using Lukomor.MVVM;
 using Unity.VisualScripting;
 using UnityEngine;
 using Unit = System.Reactive.Unit;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class PlayerViewModel : IViewModel
     {

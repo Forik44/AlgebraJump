@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     [CreateAssetMenu(fileName = "SpawnerPrefabs", menuName = "SpawnerPrefabs", order = 51)]
     public class SpawnerFactory : ScriptableObject

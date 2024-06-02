@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eae45995fb415ca888029c7beef32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenMainMenuViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenMainMenuViewModel
   _propertyName: ExitButtonClicked
   _button: {fileID: 8764647777041370516}
 --- !u!1 &5899782419324355444
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenMainMenuViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenMainMenuViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []
@@ -800,6 +800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eae45995fb415ca888029c7beef32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenMainMenuViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenMainMenuViewModel
   _propertyName: StartGameButtonClicked
   _button: {fileID: 7096576164496806703}

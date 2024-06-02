@@ -1,7 +1,7 @@
 using System;
 using Lukomor.Reactive;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class ScreenGameLoseViewModel : ScreenViewModel
     {

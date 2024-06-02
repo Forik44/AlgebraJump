@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabMappings:
-  - ViewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenMainMenuViewModel
+  - ViewModelTypeFullName: AlgebraJump.Runner.ScreenMainMenuViewModel
     PrefabView: {fileID: 7100132614258209848, guid: 662ecbaff992f184593356db2b9f04fe, type: 3}
   _prefabByDefault: {fileID: 7100132614258209848, guid: 662ecbaff992f184593356db2b9f04fe, type: 3}
 --- !u!223 &5623531163379311138
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.UIRootMainMenuViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.UIRootMainMenuViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []

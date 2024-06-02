@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class RunMovementState : PlayerMovementState
     {

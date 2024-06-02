@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     [CreateAssetMenu(fileName = "PlayerResources", menuName = "PlayerResources", order = 51)]
     public class PlayerResources : ScriptableObject

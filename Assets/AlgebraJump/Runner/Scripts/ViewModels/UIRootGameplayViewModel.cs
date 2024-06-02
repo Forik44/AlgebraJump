@@ -2,7 +2,7 @@ using System;
 using Lukomor.MVVM;
 using Lukomor.Reactive;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class UIRootGameplayViewModel : IViewModel
     {

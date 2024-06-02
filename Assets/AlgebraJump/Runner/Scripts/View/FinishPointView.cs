@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class FinishPointView : MonoBehaviour
     {

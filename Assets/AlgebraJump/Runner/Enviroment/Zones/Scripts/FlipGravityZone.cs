@@ -1,6 +1,7 @@
+using AlgebraJump.Bank;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class FlipGravityZone : IZone
     {

@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using AlgebraJump.Bank;
 using UnityEditor;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public abstract class IZone : MonoBehaviour
     {

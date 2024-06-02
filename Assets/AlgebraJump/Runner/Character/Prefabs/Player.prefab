@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.PlayerViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42fd23546bf484089a642ac8cdd31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.PlayerViewModel
   _propertyName: UpdatePlayerPosition
 --- !u!114 &3923979055438434697
 MonoBehaviour:
@@ -775,13 +775,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933a87f731cace44c8da069ecfd2741f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.PlayerViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.PlayerViewModel
   _propertyName: PositionReset
   _event:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3004975005640280803}
-        m_TargetAssemblyTypeName: Lukomor.AlgebraJump.Runner.PlayerView, Assembly-CSharp
+        m_TargetAssemblyTypeName: AlgebraJump.Runner.PlayerView, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:

@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenPauseViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenPauseViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eae45995fb415ca888029c7beef32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenPauseViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenPauseViewModel
   _propertyName: HandleResumeButtonClick
   _button: {fileID: 7796430801431090829}
 --- !u!1 &4722855756706484072
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eae45995fb415ca888029c7beef32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenPauseViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenPauseViewModel
   _propertyName: HandleMainMenuButtonClick
   _button: {fileID: 2289265246014329026}
 --- !u!1 &7364890894626940037

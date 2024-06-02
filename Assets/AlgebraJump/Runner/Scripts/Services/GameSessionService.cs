@@ -1,10 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Security.Claims;
+using AlgebraJump.Bank;
 using Lukomor.Reactive;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class GameSessionService
     {
@@ -17,10 +19,12 @@ namespace Lukomor.AlgebraJump.Runner
         public IReactiveProperty<bool> IsPaused => _isPaused;
         
         public int ScoreLimit => _scoreLimit;
-        
+
+        private Dictionary<ResourceType, int> _collectedResources;
         private readonly int _scoreLimit;
         private readonly int _startPointX;
         private readonly int _finishPointX;
+        private readonly BankService _bankService;
 
         private readonly ReactiveProperty<int> _playerScore;
 
@@ -31,8 +35,9 @@ namespace Lukomor.AlgebraJump.Runner
         private event Action<Unit> _pausedGame;
         private event Action<Unit> _unpausedGame;
         
-        public GameSessionService(float startPointX, float finishPointX)
+        public GameSessionService(BankService bankService,float startPointX, float finishPointX)
         {
+            _bankService = bankService;
             _startPointX = (int)Math.Round(startPointX);
             _finishPointX = (int)Math.Round(finishPointX);
             
@@ -40,6 +45,7 @@ namespace Lukomor.AlgebraJump.Runner
             
             _playerScore = new ReactiveProperty<int>(0);
             _isPaused = new ReactiveProperty<bool>(false);
+            _collectedResources = new Dictionary<ResourceType, int>();
 
             GameLose = Observable.FromEvent<Unit>(a => _gameLose += a, a => _gameLose -= a);
             GameWin = Observable.FromEvent<Unit>(a => _gameWin += a, a => _gameWin -= a);
@@ -59,14 +65,14 @@ namespace Lukomor.AlgebraJump.Runner
             
             if (_playerScore.Value >= _scoreLimit)
             {
-                Pause();
-                _gameWin?.Invoke(Unit.Default);
+                WinGame();
             }
         }
 
         public void RestartGame()
         {
             _playerScore.Value = 0;
+            _collectedResources.Clear();
             
             Unpause();
             
@@ -91,7 +97,31 @@ namespace Lukomor.AlgebraJump.Runner
             _isPaused.Value = false;
             _unpausedGame?.Invoke(Unit.Default);
         }
+
+        public void AddCollectedResource(ResourceType resourceType, int amount)
+        {
+            if (_collectedResources.ContainsKey(resourceType))
+            {
+                _collectedResources[resourceType] += amount;
+            }
+            else
+            {
+                _collectedResources[resourceType] = amount;
+            }
+        }
         
+        private void WinGame()
+        {
+            Pause();
+
+            foreach (var resource in _collectedResources)
+            {
+                _bankService.AddItems(resource.Key, resource.Value);
+            }
+
+            _gameWin?.Invoke(Unit.Default);
+        }
+
         private int WorldToRelativePosition(float playerPosition, int startPointX)
         {
             return (int)Math.Round(playerPosition - startPointX);

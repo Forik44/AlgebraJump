@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class FlyMovementState : PlayerMovementState
     {

@@ -2163,6 +2163,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &333574914
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.3400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.327196
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.60633504
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563719373813679821, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584286644679229666, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
+      propertyPath: m_Name
+      value: CoinsZone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d8605e53a411b564daa7b507dd3e7a09, type: 3}
 --- !u!1 &353906394
 GameObject:
   m_ObjectHideFlags: 0
@@ -29714,7 +29775,7 @@ Transform:
   m_GameObject: {fileID: 770844566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.63, y: 3.91, z: 0}
+  m_LocalPosition: {x: 147.5, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34047,7 +34108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42fd23546bf484089a642ac8cdd31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.UIRootGameplayViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.UIRootGameplayViewModel
   _propertyName: OpenGameplayScreen
 --- !u!1001 &1576889136
 PrefabInstance:
@@ -36969,7 +37030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.UIRootGameplayViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.UIRootGameplayViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []
@@ -36989,7 +37050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42fd23546bf484089a642ac8cdd31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.UIRootGameplayViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.UIRootGameplayViewModel
   _propertyName: HandlePauseButtonClick
 --- !u!114 &8065621984938099543
 MonoBehaviour:
@@ -37070,13 +37131,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabMappings:
-  - ViewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameplayViewModel
+  - ViewModelTypeFullName: AlgebraJump.Runner.ScreenGameplayViewModel
     PrefabView: {fileID: 3479811450629385304, guid: 305aff7d20bd031409444eecea0f90de, type: 3}
-  - ViewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenPauseViewModel
+  - ViewModelTypeFullName: AlgebraJump.Runner.ScreenPauseViewModel
     PrefabView: {fileID: 4538281269218611566, guid: 2a2700808ecb1bf44acdd2fb0548f108, type: 3}
-  - ViewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameLoseViewModel
+  - ViewModelTypeFullName: AlgebraJump.Runner.ScreenGameLoseViewModel
     PrefabView: {fileID: 1795455280032357305, guid: 4a982cd964dd889458f0afa8ca7c90aa, type: 3}
-  - ViewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameWinViewModel
+  - ViewModelTypeFullName: AlgebraJump.Runner.ScreenGameWinViewModel
     PrefabView: {fileID: 1795455280032357305, guid: e1bf039cf324230458003c87ea95ca29, type: 3}
   _prefabByDefault: {fileID: 3479811450629385304, guid: 305aff7d20bd031409444eecea0f90de, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -37094,3 +37155,4 @@ SceneRoots:
   - {fileID: 1806024126}
   - {fileID: 227182395}
   - {fileID: 1626167315}
+  - {fileID: 333574914}

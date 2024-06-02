@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40c37fb527bf1b48a487320194acaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameWinViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameWinViewModel
   _propertyName: GameWinText
   _event:
     m_PersistentCalls:
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eae45995fb415ca888029c7beef32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameWinViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameWinViewModel
   _propertyName: HandleMainMenuButtonClick
   _button: {fileID: 7319813433996007194}
 --- !u!1 &4626443793423089115
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eae45995fb415ca888029c7beef32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameWinViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameWinViewModel
   _propertyName: HandleAgainButtonClick
   _button: {fileID: 1612945711921680725}
 --- !u!1 &6135881120883624590
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameWinViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameWinViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []

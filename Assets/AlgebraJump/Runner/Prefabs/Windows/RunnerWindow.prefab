@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2f4280e1cd7340a37aa0a1d7b6d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameplayViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameplayViewModel
   _viewModelPropertyName: 
   _isParentView: 1
   _subViews: []
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba7e51fd4daf464c94e671b96434635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameplayViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameplayViewModel
   _propertyName: Progress
   _event:
     m_PersistentCalls:
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba7e51fd4daf464c94e671b96434635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewModelTypeFullName: Lukomor.AlgebraJump.Runner.ScreenGameplayViewModel
+  _viewModelTypeFullName: AlgebraJump.Runner.ScreenGameplayViewModel
   _propertyName: 
   _event:
     m_PersistentCalls:

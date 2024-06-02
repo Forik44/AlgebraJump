@@ -3,7 +3,7 @@ using System.Reactive;
 using System.Reactive.Linq;
 using Lukomor.MVVM;
 
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public abstract class ScreenViewModel : IViewModel
     {

@@ -1,4 +1,6 @@
-namespace Lukomor.AlgebraJump.Runner
+using AlgebraJump.Bank;
+
+namespace AlgebraJump.Runner
 {
     public class DoubleJumpZone : IZone
     {

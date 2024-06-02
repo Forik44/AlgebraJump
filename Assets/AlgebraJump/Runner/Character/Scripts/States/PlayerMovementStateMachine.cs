@@ -1,4 +1,4 @@
-namespace Lukomor.AlgebraJump.Runner
+namespace AlgebraJump.Runner
 {
     public class PlayerMovementStateMachine : StateMachine
     {
