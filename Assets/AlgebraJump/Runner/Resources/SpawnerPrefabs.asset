@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946540a1b64faab49a468139ba702d9b, type: 3}
   m_Name: SpawnerPrefabs
   m_EditorClassIdentifier: 
-  _player: {fileID: 3004975005640280803, guid: e8b739cac4aa7e947859e2b4d15f9666, type: 3}
+  _player: {fileID: 2008715268803781633, guid: e8b739cac4aa7e947859e2b4d15f9666, type: 3}
   _camera: {fileID: 3509305094178188116, guid: 63258f73881080948ace8deb2877afd3, type: 3}

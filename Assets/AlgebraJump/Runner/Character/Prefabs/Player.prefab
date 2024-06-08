@@ -664,11 +664,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518811102853745343}
-  - component: {fileID: 3004975005640280803}
   - component: {fileID: 1462863910685441164}
-  - component: {fileID: 6877679926354415072}
   - component: {fileID: 3923979055438434697}
   - component: {fileID: 5768481269078951806}
+  - component: {fileID: 2008715268803781633}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -693,43 +692,6 @@ Transform:
   - {fileID: 7320054902668397567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3004975005640280803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6468457962545068662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f101494521014e346a6e7b1bfdcbe08e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPositionChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6877679926354415072}
-        m_TargetAssemblyTypeName: Lukomor.MVVM.Binders.EmptyMethodBinder, Lukomor
-        m_MethodName: Perform
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _gravity: -7
-  _checkGroundRadius: 0.55
-  _jumpHeight: 2.5
-  _groundCheckerPivot: {fileID: 7320054902668397567}
-  _groundMask:
-    serializedVersion: 2
-    m_Bits: 64
-  _animator: {fileID: 5440181009906635087}
-  _visualRoot: {fileID: 5342713894673341129}
-  _rigidbody2D: {fileID: 5768481269078951806}
 --- !u!114 &1462863910685441164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,22 +709,7 @@ MonoBehaviour:
   _isParentView: 1
   _subViews: []
   _childBinders:
-  - {fileID: 6877679926354415072}
   - {fileID: 3923979055438434697}
---- !u!114 &6877679926354415072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6468457962545068662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42fd23546bf484089a642ac8cdd31a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewModelTypeFullName: AlgebraJump.Runner.PlayerViewModel
-  _propertyName: UpdatePlayerPosition
 --- !u!114 &3923979055438434697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,8 +727,8 @@ MonoBehaviour:
   _event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3004975005640280803}
-        m_TargetAssemblyTypeName: AlgebraJump.Runner.PlayerView, Assembly-CSharp
+      - m_Target: {fileID: 2008715268803781633}
+        m_TargetAssemblyTypeName: AlgebraJump.Runner.CharacterHierarchy, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -819,6 +766,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2008715268803781633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468457962545068662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e944e930fece401dab283180652b7754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GroundCheckerPivot: {fileID: 7320054902668397567}
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  Animator: {fileID: 5440181009906635087}
+  VisualRoot: {fileID: 5342713894673341129}
+  Rigidbody: {fileID: 5768481269078951806}
 --- !u!1 &8756180108308418584
 GameObject:
   m_ObjectHideFlags: 0

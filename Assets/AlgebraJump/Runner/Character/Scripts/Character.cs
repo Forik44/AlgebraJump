@@ -1,42 +1,62 @@
 using System;
-using System.Linq;
-using TMPro.EditorUtilities;
+using AlgebraJump.UnityUtils;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UIElements;
+
 
 namespace AlgebraJump.Runner
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerView : MonoBehaviour
+    public class Character : ICharacter
     {
-        public UnityEvent OnPositionChanged;
+        public event Action<float> OnPositionChanged;
         public event Action<Collider2D> OnTriggerEnter;
         public event Action<Collider2D> OnTriggerExit;
         
-        public PlayerMovementStateMachine MovementStateMachine { get; private set; }
+        public CharacterStateMachine MovementStateMachine { get; private set; }
         public bool TryStartFly = false;
         public bool TryStopFly = false;
         public bool TryJump = false;
+        public Transform Transform => _characterHierarchy.transform;
         
-        [SerializeField] private float _gravity = -9.81f;
-        [SerializeField] private float _checkGroundRadius = 0.5f;
-        [SerializeField] private float _jumpHeight = 3f;
-        [SerializeField] private Transform _groundCheckerPivot;
-        [SerializeField] private LayerMask _groundMask;
-        [SerializeField] private Animator _animator;
-        [SerializeField] private Transform _visualRoot;
+        private float _gravity = -6f;
+        private float _checkGroundRadius = 0.5f;
+        private float _jumpHeight = 3f;
         
-        private Rigidbody2D _rigidbody2D;
+        private CharacterHierarchy _characterHierarchy;
+
+        private Transform _groundCheckerPivot => _characterHierarchy.GroundCheckerPivot;
+        private LayerMask _groundMask => _characterHierarchy.GroundMask;
+        private Animator _animator => _characterHierarchy.Animator;
+        private Transform _visualRoot => _characterHierarchy.VisualRoot;
+        private Rigidbody2D _rigidbody2D => _characterHierarchy.Rigidbody;
         private Vector3 _initialPosition;
         private CameraFollower _cameraFollower;
         private PlayerResources _playerResources;
         private bool _hasDoubleJump = false;
+        private IEventManager _eventManager;
 
         public bool IsActive
         {
-            get => enabled;
-            set => enabled = value;
+            get => _characterHierarchy.enabled;
+            set => _characterHierarchy.enabled = value;
+        }
+        
+        public Character(CharacterHierarchy characterHierarchy,Transform initialPosition, CameraFollower cameraFollower, PlayerResources playerResources, IEventManager eventManager)
+        {
+            _characterHierarchy = characterHierarchy;
+            _initialPosition = initialPosition.position;
+            _cameraFollower = cameraFollower;
+            _cameraFollower.RestartCamera(initialPosition);
+            _playerResources = playerResources;
+            _eventManager = eventManager;
+
+            _characterHierarchy.OnTriggerEnter += OnTriggerEnter2D;
+            _characterHierarchy.OnTriggerExit += OnTriggerExit2D;
+            _characterHierarchy.OnRestart += Restart;
+            
+            InitializeStateMachine();
+            Restart();
         }
         
         public void Jump()
@@ -49,30 +69,22 @@ namespace AlgebraJump.Runner
             _rigidbody2D.velocityY = (float)Math.Sqrt(_jumpHeight * -2 * _gravity) * _rigidbody2D.gravityScale;
         }
 
-        public void Initialize(Transform transform, CameraFollower cameraFollower, PlayerResources playerResources)
-        {
-            _initialPosition = transform.position;
-            _cameraFollower = cameraFollower;
-            _cameraFollower.RestartCamera(transform);
-            _playerResources = playerResources;
-        }
-
         public void StopMoving()
         {
-            enabled = false;
+            _characterHierarchy.enabled = false;
             _rigidbody2D.Sleep();
         }
         
         public void StartMoving()
         {
-            enabled = true;
+            _characterHierarchy.enabled = true;
             _rigidbody2D.WakeUp();
         }
 
         public void Restart()
         {
-            transform.position = _initialPosition;
-            _cameraFollower.RestartCamera(transform);
+            Transform.position = _initialPosition;
+            _cameraFollower.RestartCamera(Transform);
             _rigidbody2D.gravityScale = 1;
             _visualRoot.localScale = new Vector3(_visualRoot.localScale.x,MathF.Abs(_visualRoot.localScale.y),_visualRoot.localScale.z);
 
@@ -132,8 +144,8 @@ namespace AlgebraJump.Runner
         
         public void SetPosition(Vector3 nextPosition)
         {
-            transform.position = nextPosition;
-            OnPositionChanged?.Invoke();
+            Transform.position = nextPosition;
+            OnPositionChanged?.Invoke(Transform.position.x);
         }
         
         public bool IsOnTheGround()
@@ -190,32 +202,10 @@ namespace AlgebraJump.Runner
         {
             MovementStateMachine.SetDyingState();
         }
-        
-        private void Awake()
-        {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-        }
 
-        private void Start()
-        {
-            InitializeStateMachine();
-            Restart();
-        }
-        
         private void InitializeStateMachine()
         {
-            MovementStateMachine = new PlayerMovementStateMachine(this,_playerResources);
-        }
-
-        private void Update()
-        {
-            MovementStateMachine.CurrentState.HandleInput();
-            MovementStateMachine.CurrentState.LogicUpdate();
-        }
-
-        private void FixedUpdate()
-        {
-            MovementStateMachine.CurrentState.PhysicsUpdate();
+            MovementStateMachine = new CharacterStateMachine(this, _playerResources, _eventManager);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

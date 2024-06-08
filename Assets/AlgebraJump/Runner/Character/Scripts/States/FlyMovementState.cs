@@ -1,18 +1,20 @@
 using System;
+using AlgebraJump.UnityUtils;
 using UnityEngine;
 
 namespace AlgebraJump.Runner
 {
-    public class FlyMovementState : PlayerMovementState
+    public class FlyMovementState : CharacterMovementState
     {
         private bool _upPressed;
-        public FlyMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
+        public FlyMovementState(Character player, PlayerResources playerResources, IEventManager eventManager) : base(player, playerResources, eventManager)
         {
             
         }
         
         public override void Enter()
         {
+            base.Enter();
             Debug.Log("Enter FlyState");
             _player.SetFlyAnimation();
         }
@@ -45,6 +47,7 @@ namespace AlgebraJump.Runner
 
         public override void Exit()
         {
+            base.Exit();
             Debug.Log("Exit FlyState");
         }
     }

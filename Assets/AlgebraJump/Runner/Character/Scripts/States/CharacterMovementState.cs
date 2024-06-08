@@ -1,25 +1,25 @@
+using System;
+using AlgebraJump.UnityUtils;
 using Unity.VisualScripting;
 using UnityEngine;
 
 namespace AlgebraJump.Runner
 {
-    public abstract class PlayerMovementState : State
+    public abstract class CharacterMovementState : State, IDisposable
     {
-        protected readonly PlayerView _player;
+        protected readonly Character _player;
         protected readonly PlayerResources _playerResources;
-
-        protected PlayerMovementState(PlayerView player, PlayerResources playerResources)
+        
+        protected CharacterMovementState(Character player, PlayerResources playerResources, IEventManager eventManager) : base(eventManager)
         {
             _player = player;
             _playerResources = playerResources;
         }
 
-        public override void Enter() { }
-
         public override void HandleInput()
         {
             //TODO:Перенести
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
                 _player.TryJump = true;
             }
@@ -28,13 +28,6 @@ namespace AlgebraJump.Runner
 
         public override void PhysicsUpdate() { }
 
-        public override void Exit() { }
-
-        public void SetDieState()
-        {
-            _player.MovementStateMachine.SetDyingState();
-        }
-
         protected void Move(Vector3 direction)
         {
             if (!_player.IsActive)
@@ -42,7 +35,7 @@ namespace AlgebraJump.Runner
                 return;
             }
             
-            var nextPosition = Vector3.Lerp(_player.transform.position, _player.transform.position + direction * _playerResources.Speed, Time.deltaTime * _playerResources.Smoothing);
+            var nextPosition = Vector3.Lerp(_player.Transform.position, _player.Transform.position + direction * _playerResources.Speed, Time.deltaTime * _playerResources.Smoothing);
 
             _player.SetPosition(nextPosition);
         }

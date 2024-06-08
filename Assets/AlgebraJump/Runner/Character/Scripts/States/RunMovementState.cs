@@ -1,17 +1,19 @@
+using AlgebraJump.UnityUtils;
 using UnityEngine;
 
 namespace AlgebraJump.Runner
 {
-    public class RunMovementState : PlayerMovementState
+    public class RunMovementState : CharacterMovementState
     {
         private bool _isGrounded = false;
-        public RunMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
+        public RunMovementState(Character player, PlayerResources playerResources, IEventManager eventManager) : base(player, playerResources, eventManager)
         {
             
         }
         
         public override void Enter()
         {
+            base.Enter();
             Debug.Log("Enter RunState");
             _player.SetRunAnimation();
         }
@@ -51,6 +53,7 @@ namespace AlgebraJump.Runner
 
         public override void Exit()
         {
+            base.Exit();
             Debug.Log("Exit RunState");
         }
     }

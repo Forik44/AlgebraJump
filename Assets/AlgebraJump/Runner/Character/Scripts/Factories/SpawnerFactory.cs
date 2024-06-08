@@ -7,10 +7,10 @@ namespace AlgebraJump.Runner
     [CreateAssetMenu(fileName = "SpawnerPrefabs", menuName = "SpawnerPrefabs", order = 51)]
     public class SpawnerFactory : ScriptableObject
     {
-        [SerializeField] private PlayerView _player;
+        [SerializeField] private CharacterHierarchy _player;
         [SerializeField] private CameraFollower _camera;
 
-        public PlayerView SpawnPlayer()
+        public CharacterHierarchy SpawnPlayer()
         {
             return Instantiate(_player);
         }

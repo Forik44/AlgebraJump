@@ -1,5 +1,6 @@
 using System;
 using AlgebraJump.Bank;
+using AlgebraJump.UnityUtils;
 using Lukomor.DI;
 using Lukomor.MVVM;
 using UnityEngine;
@@ -15,12 +16,13 @@ namespace AlgebraJump.Runner
         [SerializeField] private Parallax[] _parallaxBackgrounds;
         [SerializeField] private PlayerResources _playerResources;
         
-        private PlayerView _player;
+        private CharacterHierarchy _characterHierarhy;
+        private Character _character;
         private CameraFollower _cameraFollower;
 
         public void Process(DIContainer container)
         {
-            SetupPlayer();
+            SetupPlayer(container);
             SetupBackgrounds();
             RegisterServices(container);
             RegisterViewModels(container);
@@ -28,28 +30,28 @@ namespace AlgebraJump.Runner
             OpenDefaultScreen(container);
         }
 
-        private void SetupPlayer()
+        private void SetupPlayer(DIContainer container)
         {
-            _player = _spawnerFactory.SpawnPlayer();
+            _characterHierarhy = _spawnerFactory.SpawnPlayer();
             _cameraFollower = _spawnerFactory.SpawnCamera();
             
-            _player.Initialize(_startPoint.transform, _cameraFollower, _playerResources);
-            
-            SetupPlayer<RunnerPlayerInput>(_player);
+            _character = new Character(_characterHierarhy, _startPoint.transform, _cameraFollower, _playerResources, container.Resolve<UnityEventManager>());
+
+            //SetupPlayer<RunnerPlayerInput>(_player);
         }
 
-        private static void SetupPlayer<T>(PlayerView player) where T : RunnerInput
+        private static void SetupPlayer<T>(CharacterHierarchy player) where T : RunnerInput
         {
-            var inputController = player.GetComponent<RunnerInput>();
+            //var inputController = player.GetComponent<RunnerInput>();
 
-            if (inputController)
-            {
-                Destroy(inputController);
-            }
+            //if (inputController)
+            //{
+                //Destroy(inputController);
+            //}
 
-            inputController = player.gameObject.AddComponent<T>();
+            //inputController = player.gameObject.AddComponent<T>();
 
-            inputController.Bind(player);
+            //inputController.Bind(player);
         }
         
         private void SetupBackgrounds()
@@ -68,7 +70,7 @@ namespace AlgebraJump.Runner
         private void RegisterViewModels(DIContainer container)
         {
             container.RegisterSingleton(
-                c => new PlayerViewModel(c.Resolve<GameSessionService>(), _player));
+                c => new PlayerViewModel(c.Resolve<GameSessionService>(), _character));
             // UI
             
             container.RegisterSingleton(
@@ -98,7 +100,7 @@ namespace AlgebraJump.Runner
 
         private void BindViewModels(DIContainer container)
         {
-            _player.GetComponent<View>().Bind(container.Resolve<PlayerViewModel>());
+            _characterHierarhy.GetComponent<View>().Bind(container.Resolve<PlayerViewModel>());
             _rootUIView.Bind(container.Resolve<UIRootGameplayViewModel>());
         }
 

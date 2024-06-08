@@ -1,5 +1,6 @@
 using AlgebraJump.Bank;
 using AlgebraJump.Scripts;
+using AlgebraJump.UnityUtils;
 using Lukomor.DI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,7 @@ namespace AlgebraJump.Runner
         private GameStatePlayerProvider _gameStateProvider;
         private ScenesService _scenesService;
         private BankService _bankService;
+        private IEventManager _eventManager;
         
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void StartGame()
@@ -49,6 +51,10 @@ namespace AlgebraJump.Runner
 
             _bankService = _rootContainer
                 .RegisterSingleton(_ => new BankService(_gameStateProvider.GameState.BankData, _gameStateProvider))
+                .CreateInstance();
+
+            _eventManager = _rootContainer
+                .RegisterSingleton(_ => new UnityEventManager())
                 .CreateInstance();
         }
 

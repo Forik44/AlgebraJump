@@ -1,19 +1,21 @@
 using System;
+using AlgebraJump.UnityUtils;
 using Unity.VisualScripting;
 using UnityEngine;
 
 namespace AlgebraJump.Runner
 {
-    public class JumpMovementState : PlayerMovementState
+    public class JumpMovementState : CharacterMovementState
     {
         private bool _isGrounded = false;
-        public JumpMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
+        public JumpMovementState(Character player, PlayerResources playerResources, IEventManager eventManager) : base(player, playerResources, eventManager)
         {
 
         }
         
         public override void Enter()
         {
+            base.Enter();
             Debug.Log("Enter JumpState");
             if (_player.CanJump())
             {
@@ -64,6 +66,7 @@ namespace AlgebraJump.Runner
 
         public override void Exit()
         {
+            base.Exit();
             Debug.Log("Exit JumpState");
         }
     }

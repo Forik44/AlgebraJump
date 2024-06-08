@@ -1,18 +1,20 @@
+using AlgebraJump.UnityUtils;
+
 namespace AlgebraJump.Runner
 {
-    public class PlayerMovementStateMachine : StateMachine
+    public class CharacterStateMachine : StateMachine
     {
         private RunMovementState _running;
         private JumpMovementState _jumping;
         private FlyMovementState _flying;
         private DieMovementState _dying;
 
-        public PlayerMovementStateMachine(PlayerView player, PlayerResources playerResources)
+        public CharacterStateMachine(Character player, PlayerResources playerResources, IEventManager eventManager)
         {
-            _running = new RunMovementState(player, playerResources);
-            _jumping = new JumpMovementState(player, playerResources);
-            _flying = new FlyMovementState(player, playerResources);
-            _dying = new DieMovementState(player, playerResources);
+            _running = new RunMovementState(player, playerResources, eventManager);
+            _jumping = new JumpMovementState(player, playerResources, eventManager);
+            _flying = new FlyMovementState(player, playerResources, eventManager);
+            _dying = new DieMovementState(player, playerResources, eventManager);
             
             Initialize(_running);
         }

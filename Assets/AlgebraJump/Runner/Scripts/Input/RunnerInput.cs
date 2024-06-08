@@ -4,9 +4,9 @@ namespace AlgebraJump.Runner
 {
     public abstract class RunnerInput : MonoBehaviour
     {
-        protected PlayerView Player { get; private set; }
+        protected Character Player { get; private set; }
         
-        public void Bind(PlayerView player)
+        public void Bind(Character player)
         {
             Player = player;
         }

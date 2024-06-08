@@ -5,13 +5,13 @@ namespace AlgebraJump.Runner
 {
     public class DamageZone : IZone
     {
-        public override void Enter(GameSessionService gameSessionService, PlayerView player)
+        public override void Enter(GameSessionService gameSessionService, ICharacter player)
         {
             player.Die();
             gameSessionService.LoseGame();
         }
 
-        public override void Exit(GameSessionService gameSessionService, PlayerView player)
+        public override void Exit(GameSessionService gameSessionService, ICharacter player)
         {
 
         }

@@ -7,12 +7,12 @@ namespace AlgebraJump.Runner
     {
         [SerializeField] private ResourceType _resourceType = ResourceType.No;
         [SerializeField] private int _amount = 0;
-        public override void Enter(GameSessionService gameSessionService, PlayerView player)
+        public override void Enter(GameSessionService gameSessionService, ICharacter player)
         {
             gameSessionService.AddCollectedResource(_resourceType, _amount);
         }
 
-        public override void Exit(GameSessionService gameSessionService, PlayerView player)
+        public override void Exit(GameSessionService gameSessionService, ICharacter player)
         {
             
         }

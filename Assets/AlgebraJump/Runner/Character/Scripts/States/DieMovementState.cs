@@ -1,16 +1,18 @@
+using AlgebraJump.UnityUtils;
 using UnityEngine;
 
 namespace AlgebraJump.Runner
 {
-    public class DieMovementState : PlayerMovementState
+    public class DieMovementState : CharacterMovementState
     {
-        public DieMovementState(PlayerView player, PlayerResources playerResources) : base(player, playerResources)
+        public DieMovementState(Character player, PlayerResources playerResources, IEventManager eventManager) : base(player, playerResources, eventManager)
         {
             
         }
         
         public override void Enter()
         {
+            base.Enter();
             Debug.Log("Enter DieState");
             _player.SetDieAnimation();
         }
@@ -32,6 +34,7 @@ namespace AlgebraJump.Runner
 
         public override void Exit()
         {
+            base.Exit();
             Debug.Log("Exit DieState");
         }
     }

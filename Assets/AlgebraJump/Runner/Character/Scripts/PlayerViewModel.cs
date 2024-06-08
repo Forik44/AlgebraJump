@@ -14,9 +14,9 @@ namespace AlgebraJump.Runner
         public IObservable<Unit> PositionReset { get; }
 
         private readonly GameSessionService _gameSessionService;
-        private readonly PlayerView _player;
+        private readonly ICharacter _player;
         
-        public PlayerViewModel(GameSessionService gameSessionService, PlayerView player)
+        public PlayerViewModel(GameSessionService gameSessionService, ICharacter player)
         {
             _gameSessionService = gameSessionService;
             _player = player;
@@ -35,11 +35,12 @@ namespace AlgebraJump.Runner
 
             _player.OnTriggerEnter += OnTriggerEnter;
             _player.OnTriggerExit += OnTriggerExit;
+            _player.OnPositionChanged += UpdatePlayerPosition;
         }
         
-        public void UpdatePlayerPosition()
+        public void UpdatePlayerPosition(float position)
         {
-            var playerPosition = (int)Math.Round(_player.transform.position.x);
+            var playerPosition = (int)Math.Round(position);
             
             _gameSessionService.UpdateScore(playerPosition);
         }
