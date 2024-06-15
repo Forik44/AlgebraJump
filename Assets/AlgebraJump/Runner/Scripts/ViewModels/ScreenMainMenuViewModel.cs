@@ -4,16 +4,16 @@ namespace AlgebraJump.Runner
 {
     public class ScreenMainMenuViewModel : ScreenViewModel
     {
-        private readonly Action _startGameplay;
+        private readonly Action<string> _startGameplay;
         
-        public ScreenMainMenuViewModel(Action startGameplay)
+        public ScreenMainMenuViewModel(Action<string> startGameplay)
         {
             _startGameplay = startGameplay;
         }
         
         public void StartGameButtonClicked()
         {
-            _startGameplay();
+            _startGameplay("FirstLevel");
         }
 
         public void ExitButtonClicked()

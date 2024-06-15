@@ -1,8 +1,9 @@
+using System;
 using AlgebraJump.UnityUtils;
 
 namespace AlgebraJump.Runner
 {
-    public class CharacterStateMachine : StateMachine
+    public class CharacterStateMachine : StateMachine, IDisposable
     {
         private RunMovementState _running;
         private JumpMovementState _jumping;
@@ -47,6 +48,14 @@ namespace AlgebraJump.Runner
         public bool IsFlying()
         {
             return CurrentState == _flying;
+        }
+
+        public void Dispose()
+        {
+            _running?.Dispose();
+            _jumping?.Dispose();
+            _flying?.Dispose();
+            _dying?.Dispose();
         }
     }
 }

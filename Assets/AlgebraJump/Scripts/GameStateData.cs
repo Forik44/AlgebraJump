@@ -1,5 +1,6 @@
 using System;
 using AlgebraJump.Bank;
+using AlgebraJump.Levels;
 using Unity.VisualScripting;
 
 namespace AlgebraJump
@@ -8,5 +9,6 @@ namespace AlgebraJump
     public class GameStateData
     {
         public BankData BankData;
+        public LevelsData LevelsData;
     }
 }

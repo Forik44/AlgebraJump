@@ -1,4 +1,5 @@
 using AlgebraJump.Bank;
+using AlgebraJump.Levels;
 using AlgebraJump.Scripts;
 using AlgebraJump.UnityUtils;
 using Lukomor.DI;
@@ -11,12 +12,14 @@ namespace AlgebraJump.Runner
     {
         private static GameEntryPoint _instance;
 
+        private RunnerEntryPoint _currentRunnerEntryPoint; 
         private DIContainer _rootContainer;
         private GameStatePlayerProvider _gameStateProvider;
         private ScenesService _scenesService;
         private BankService _bankService;
+        private LevelsService _levelsService;
         private IEventManager _eventManager;
-        
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void StartGame()
         {
@@ -27,6 +30,7 @@ namespace AlgebraJump.Runner
         private void Init()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneUnloaded += OnSceneUnloaded;
             _rootContainer = new DIContainer();
 
             InitProviders();
@@ -53,9 +57,14 @@ namespace AlgebraJump.Runner
                 .RegisterSingleton(_ => new BankService(_gameStateProvider.GameState.BankData, _gameStateProvider))
                 .CreateInstance();
 
+            _levelsService = _rootContainer
+                .RegisterSingleton(_ => new LevelsService(_gameStateProvider.GameState.LevelsData, _scenesService))
+                .CreateInstance();
+
             _eventManager = _rootContainer
                 .RegisterSingleton(_ => new UnityEventManager())
                 .CreateInstance();
+            
         }
 
         private void LoadScene(string sceneName)
@@ -96,7 +105,16 @@ namespace AlgebraJump.Runner
                 StartGameplay();
             }
         }
+        
+        private void OnSceneUnloaded(Scene scene)
+        {
+            var sceneName = scene.name;
 
+            if (sceneName == ScenesService.SCENE_GAMEPLAY)
+            {
+                DisposeRunner();
+            }
+        }
         private void StartMainMenu()
         {
             var entryPoint = Object.FindObjectOfType<MainMenuEntryPoint>();
@@ -107,10 +125,20 @@ namespace AlgebraJump.Runner
 
         private void StartGameplay()
         {
-            var entryPoint = Object.FindObjectOfType<RunnerEntryPoint>();
+            _scenesService.AsyncLoadLevel.completed += OnRunnerSceneLoaded;
+        }
+
+        private void OnRunnerSceneLoaded(AsyncOperation asyncOperation)
+        {
+            _currentRunnerEntryPoint = Object.FindObjectOfType<RunnerEntryPoint>();
             var gameplayContainer = new DIContainer(_rootContainer);
             
-            entryPoint.Process(gameplayContainer);
+            _currentRunnerEntryPoint.Process(gameplayContainer);
+        }
+
+        private void DisposeRunner()
+        {
+            _currentRunnerEntryPoint.Dispose();
         }
     }
 }

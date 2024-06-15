@@ -7,7 +7,7 @@ using UnityEngine;
 namespace AlgebraJump.Runner
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class Character : ICharacter
+    public class Character : ICharacter, IDisposable
     {
         public event Action<float> OnPositionChanged;
         public event Action<Collider2D> OnTriggerEnter;
@@ -232,6 +232,11 @@ namespace AlgebraJump.Runner
         {
             _animator.SetTrigger("Restart");
             _animator.ResetTrigger("Run");
+        }
+
+        public void Dispose()
+        {
+            MovementStateMachine?.Dispose();
         }
     }
 }

@@ -7,27 +7,36 @@ using UnityEngine;
 
 namespace AlgebraJump.Runner
 {
-    public class RunnerEntryPoint : MonoBehaviour
+    public class RunnerEntryPoint : MonoBehaviour, IDisposable
     {
-        [SerializeField] private StartPointView _startPoint;
-        [SerializeField] private FinishPointView _finishPoint;
         [SerializeField] private View _rootUIView;
         [SerializeField] private SpawnerFactory _spawnerFactory;
-        [SerializeField] private Parallax[] _parallaxBackgrounds;
         [SerializeField] private PlayerResources _playerResources;
         
+        private StartPointView _startPoint;
+        private FinishPointView _finishPoint;
+        private Parallax[] _parallaxBackgrounds;
         private CharacterHierarchy _characterHierarhy;
         private Character _character;
         private CameraFollower _cameraFollower;
 
         public void Process(DIContainer container)
         {
+            FindLevelObjects();
             SetupPlayer(container);
             SetupBackgrounds();
             RegisterServices(container);
             RegisterViewModels(container);
             BindViewModels(container);
             OpenDefaultScreen(container);
+        }
+
+        private void FindLevelObjects()
+        {
+            _startPoint = FindAnyObjectByType<StartPointView>();
+            _finishPoint = FindAnyObjectByType<FinishPointView>();
+
+            _parallaxBackgrounds = FindObjectsByType<Parallax>(FindObjectsSortMode.None);
         }
 
         private void SetupPlayer(DIContainer container)
@@ -96,7 +105,6 @@ namespace AlgebraJump.Runner
                 c.Resolve<GameSessionService>()
             ));
         }
-        
 
         private void BindViewModels(DIContainer container)
         {
@@ -109,6 +117,11 @@ namespace AlgebraJump.Runner
             var uiRoot = container.Resolve<UIRootGameplayViewModel>();
             
             uiRoot.OpenGameplayScreen();
+        }
+
+        public void Dispose()
+        {
+            _character?.Dispose();
         }
     }
 }

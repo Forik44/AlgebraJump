@@ -5,52 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d76a6ee-0802-464e-bd9c-f0dbdca492b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/CharacterHierarchy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/CharacterHierarchy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/ICharacter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/ICharacter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/EUnityEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/EUnityEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/EventActionList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/EventActionList.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/EventActionWithParam.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/EventActionWithParam.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/IEventManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/IEventManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/UnityEventHolder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/UnityEventHolder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/UnityEventManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/UnityEventManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Resources/Level1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Resources/Level1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Resources/Level2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data/CollectedZoneData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data/CollectedZoneData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data/LevelData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data/LevelData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data/LevelsData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/Data/LevelsData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/LevelsConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/LevelsConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/LevelsDataProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/LevelsDataProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/LevelsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Levels/Scripts/LevelsService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Resources/LevelsConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Resources/LevelsConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/IResourceZone.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/IResourceZone.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/Level1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/Level1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/SerializableDictionary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AlgebraJump/UnityUtils/Scripts/SerializableDictionary.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlgebraJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Animation/Sit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Animation/Sit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Animation/sword_man.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Resources/Animation/sword_man.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Factories/SpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Factories/SpawnerFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Character.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/PlayerViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/DieMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/DieMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/FlyMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/FlyMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterMovementState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/PlayerMovementStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterStateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/CoinsZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Prefabs/CoinsZone.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/AddResourceZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/AddResourceZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DamageZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DamageZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DoubleJumpZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/DoubleJumpZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipFlyStateZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipFlyStateZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipGravityZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/FlipGravityZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/IZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Enviroment/Zones/Scripts/IZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/SpawnerPrefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Resources/SpawnerPrefabs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/RunnerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/RunnerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Services/GameSessionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Services/GameSessionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Services/ScenesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Services/ScenesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/ScreenMainMenuViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/ScreenMainMenuViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpGameplay.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpMainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scenes/AlgebraJumpMainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameEntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStateData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStateData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStatePlayerProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStatePlayerProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +59,16 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/161c0a8116c14435a7f9f792d1b14575148450/c4/2efab24f/Unit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/4a/a1607c99/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63e0ac063e5844b4918dd7961d730e038a00/96/04e74c4e/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/18/1721c49a/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/2e/f893bf76/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/68/0f2d2acc/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/8c/7e9ce888/StringMarshaller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/a5/51a99ce0/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/ec/c239593a/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/f1/7374cdda/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/f4/0f4f2edf/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/f9/3d3516ff/Logger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/f9/91aa2a8d/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b66e7caaeb045048a0fbc11f111e6fa1cb800/fa/c1f4c963/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77205ecf2fa74d56a8879f2a50f5692010fc00/b4/530c8822/HashSet`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82c431fabf7e4af7807b9acbb217853434400/07/95ce2515/Animator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,21 +76,35 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c03889a4b4984101a827b6573211d6992e600/f1/ad5c229d/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/da3636a5e2f846ba8366cda8b245c30b955400/09/17c3c0da/EditorCompilationInterface.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/da3636a5e2f846ba8366cda8b245c30b955400/82/647a83cb/InspectorWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/07/95e0cdc5/MemoryExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/0a/29446400/WaitHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/24/e2e616c0/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/25/7524c017/ReadOnlySpan`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/30/dba4e44a/GenericEqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/35/9732536b/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/3a/9e1b316a/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/3f/1fc6d33c/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/57/0cd7e967/ValueTuple`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/61/269046f4/MulticastDelegate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/62/25ca56de/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/64/b7953375/MethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/9e/ffa57b5a/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/c6/5f137943/ApplicationException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/c6/d15bc466/EqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/ca/61976e3f/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/cd/9f913683/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/de/ad9b972c/TargetInvocationException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3af34af023b44c791c7d6a0f562f99c46ae00/f9/cb107bcf/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/GameplayInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/RunnerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Input/RunnerPlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Services/GameSessionService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/Services/ScenesService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/ViewModels/ScreenViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Runtime/UGUI/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Runtime/UGUI/UI/Core/Layout/HorizontalOrVerticalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Runtime/UGUI/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Core/Utilities/ComponentHolderProtocol.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vavilichev.lukomor@3d870377b8/Lukomor/Scripts/DI/DIContainer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -149,10 +166,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25540">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21876">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="25540" />
+      <option name="pid" value="21876" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -200,6 +217,10 @@
       <workItem from="1717614965894" duration="173000" />
       <workItem from="1717705017344" duration="5187000" />
       <workItem from="1717883805386" duration="3427000" />
+      <workItem from="1717956811329" duration="1550000" />
+      <workItem from="1718216542678" duration="16000" />
+      <workItem from="1718216579345" duration="1813000" />
+      <workItem from="1718451696368" duration="19510000" />
     </task>
     <servers />
   </component>
@@ -215,133 +236,43 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/DieMovementState.cs</url>
-          <line>15</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\DieMovementState.cs" initialLine="13" containingFunctionPresentation="Method 'Enter'">
-            <startOffsets>
-              <option value="430" />
-            </startOffsets>
-            <endOffsets>
-              <option value="458" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/CharacterStateMachine.cs</url>
-          <line>33</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\PlayerMovementStateMachine.cs" initialLine="31" containingFunctionPresentation="Method 'SetFlyingState'" />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/Character.cs</url>
-          <line>120</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\PlayerView.cs" initialLine="105" containingFunctionPresentation="Method 'FlipFlyState'" />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Bank/Scripts/BankService.cs</url>
-          <line>52</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Bank\Scripts\BankService.cs" initialLine="49" containingFunctionPresentation="Method 'AddItems'">
-            <startOffsets>
-              <option value="1464" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1517" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStatePlayerProvider.cs</url>
-          <line>49</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Scripts\GameStatePlayerProvider.cs" initialLine="51" containingFunctionPresentation="Method 'CreateBankData'">
-            <startOffsets>
-              <option value="1360" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1390" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStatePlayerProvider.cs</url>
-          <line>14</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Scripts\GameStatePlayerProvider.cs" initialLine="14" containingFunctionPresentation="Method 'SaveGameState'">
-            <startOffsets>
-              <option value="381" />
-            </startOffsets>
-            <endOffsets>
-              <option value="422" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Scripts/RunnerEntryPoint.cs</url>
           <line>35</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\RunMovementState.cs" initialLine="35" containingFunctionPresentation="Method 'LogicUpdate'">
+          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Scripts\RunnerEntryPoint.cs" initialLine="36" containingFunctionPresentation="Method 'FindLevelObjects'">
             <startOffsets>
-              <option value="936" />
+              <option value="1098" />
             </startOffsets>
             <endOffsets>
-              <option value="973" />
+              <option value="1150" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs</url>
-          <line>55</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\RunMovementState.cs" initialLine="55" containingFunctionPresentation="Method 'Exit'">
+          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStatePlayerProvider.cs</url>
+          <line>17</line>
+          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Scripts\GameStatePlayerProvider.cs" initialLine="15" containingFunctionPresentation="Method 'SaveGameState'">
             <startOffsets>
-              <option value="1434" />
+              <option value="464" />
             </startOffsets>
             <endOffsets>
-              <option value="1446" />
+              <option value="505" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Scripts/GameStatePlayerProvider.cs</url>
+          <line>26</line>
+          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Scripts\GameStatePlayerProvider.cs" initialLine="26" containingFunctionPresentation="Method 'LoadGameState'">
+            <startOffsets>
+              <option value="740" />
+            </startOffsets>
+            <endOffsets>
+              <option value="778" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/RunMovementState.cs</url>
-          <line>15</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\RunMovementState.cs" initialLine="15" containingFunctionPresentation="Method 'Enter'">
-            <startOffsets>
-              <option value="446" />
-            </startOffsets>
-            <endOffsets>
-              <option value="459" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpMovementState.cs</url>
-          <line>17</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\JumpMovementState.cs" initialLine="17" containingFunctionPresentation="Method 'Enter'">
-            <startOffsets>
-              <option value="479" />
-            </startOffsets>
-            <endOffsets>
-              <option value="492" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/AlgebraJump/Runner/Character/Scripts/States/JumpMovementState.cs</url>
-          <line>68</line>
-          <properties documentPath="X:\Project\AlgebraJump\Assets\AlgebraJump\Runner\Character\Scripts\States\JumpMovementState.cs" initialLine="68" containingFunctionPresentation="Method 'Exit'">
-            <startOffsets>
-              <option value="1751" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1763" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

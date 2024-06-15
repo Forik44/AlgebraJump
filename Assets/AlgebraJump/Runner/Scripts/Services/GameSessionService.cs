@@ -35,7 +35,7 @@ namespace AlgebraJump.Runner
         private event Action<Unit> _pausedGame;
         private event Action<Unit> _unpausedGame;
         
-        public GameSessionService(BankService bankService,float startPointX, float finishPointX)
+        public GameSessionService(BankService bankService, float startPointX, float finishPointX)
         {
             _bankService = bankService;
             _startPointX = (int)Math.Round(startPointX);
@@ -114,12 +114,17 @@ namespace AlgebraJump.Runner
         {
             Pause();
 
+            SaveResult();
+
+            _gameWin?.Invoke(Unit.Default);
+        }
+
+        private void SaveResult()
+        {
             foreach (var resource in _collectedResources)
             {
                 _bankService.AddItems(resource.Key, resource.Value);
             }
-
-            _gameWin?.Invoke(Unit.Default);
         }
 
         private int WorldToRelativePosition(float playerPosition, int startPointX)
