@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AlgebraJump.UnityUtils;
+using UnityEngine.Serialization;
 
 namespace AlgebraJump.Levels
 {
@@ -8,6 +9,6 @@ namespace AlgebraJump.Levels
     public class LevelData
     {
         public string SceneName;
-        public List<CollectedZoneData> CollectedResourceInLevels;
+        public List<string> CollectedResourceZonesInLevels;
     }
 }

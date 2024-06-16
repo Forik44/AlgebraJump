@@ -3,7 +3,7 @@ using AlgebraJump.Bank;
 using AlgebraJump.Levels;
 using UnityEngine;
 
-namespace AlgebraJump.Scripts
+namespace AlgebraJump
 {
     public class GameStatePlayerProvider : IGameStateProvider, IGameStateSaver
     {

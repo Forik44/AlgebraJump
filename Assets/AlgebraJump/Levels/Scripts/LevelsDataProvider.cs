@@ -22,7 +22,7 @@ namespace AlgebraJump.Levels
             {
                 var levelData = new LevelData();
                 levelData.SceneName = level.SceneName;
-                levelData.CollectedResourceInLevels = new List<CollectedZoneData>();
+                levelData.CollectedResourceZonesInLevels = new List<string>();
                 levelsData.Levels.Add(level.LevelId, levelData);
             }
             
@@ -77,7 +77,7 @@ namespace AlgebraJump.Levels
         private void InitializeLevelData(LevelsData levelsData, LevelData levelData, LevelConfig levelConfig)
         {
             levelData.SceneName = levelConfig.SceneName;
-            levelData.CollectedResourceInLevels = new List<CollectedZoneData>();
+            levelData.CollectedResourceZonesInLevels = new List<string>();
             levelsData.Levels.Add(levelConfig.LevelId, levelData);
         }
     }

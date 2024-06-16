@@ -1,6 +1,5 @@
 using AlgebraJump.Bank;
 using AlgebraJump.Levels;
-using AlgebraJump.Scripts;
 using AlgebraJump.UnityUtils;
 using Lukomor.DI;
 using UnityEngine;
@@ -23,6 +22,9 @@ namespace AlgebraJump.Runner
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void StartGame()
         {
+            Application.targetFrameRate = 60;
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
+            
             _instance = new GameEntryPoint();
             _instance.Init();
         }
@@ -58,7 +60,7 @@ namespace AlgebraJump.Runner
                 .CreateInstance();
 
             _levelsService = _rootContainer
-                .RegisterSingleton(_ => new LevelsService(_gameStateProvider.GameState.LevelsData, _scenesService))
+                .RegisterSingleton(_ => new LevelsService(_gameStateProvider.GameState.LevelsData, _scenesService, _gameStateProvider))
                 .CreateInstance();
 
             _eventManager = _rootContainer

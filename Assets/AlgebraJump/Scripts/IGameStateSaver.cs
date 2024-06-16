@@ -1,4 +1,4 @@
-namespace AlgebraJump.Scripts
+namespace AlgebraJump
 {
     public interface IGameStateSaver
     {
